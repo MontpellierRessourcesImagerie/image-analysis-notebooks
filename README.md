@@ -2,7 +2,7 @@
 
 The project contains jupyter notebook about bio-image-analysis. Beakerx will be used to allow mixing python and java.
  
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/MontpellierRessourcesImagerie/image-analysis-notebooks/v0.1.4)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/MontpellierRessourcesImagerie/image-analysis-notebooks/v0.1.5)
 
 Note: The binder version is not fully functional yet.
 
