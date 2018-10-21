@@ -1,3 +1,4 @@
+pip install matplotlib
 conda config --env --add pinned_packages 'openjdk>8.0.121'
 conda install -c conda-forge ipywidgets beakerx
 wget https://downloads.imagej.net/fiji/latest/fiji-linux64.zip
