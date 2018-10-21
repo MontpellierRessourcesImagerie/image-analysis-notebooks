@@ -1,1 +1,3 @@
 conda install -c conda-forge ipywidgets beakerx
+wget https://downloads.imagej.net/fiji/latest/fiji-linux64.zip
+unzip fiji-linux64.zip
