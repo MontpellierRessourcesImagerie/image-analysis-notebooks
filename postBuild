@@ -1,2 +1,1 @@
-pip install beakerx
-beakerx install
+conda install -c conda-forge ipywidgets beakerx
