@@ -1,0 +1,1900 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f93a4e4e9fa, pid=3597, tid=0x00007f939013f700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_152-b12) (build 1.8.0_152-release-1056-b12)
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# v  ~BufferBlob::jni_fast_GetLongField
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f92f2056800):  JavaThread "AWT-XAWT" daemon [_thread_in_native, id=3636, stack(0x00007f939003f000,0x00007f9390140000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007f93ba2255c0, RBX=0x00007f92f20569e0, RCX=0x00007f93baca9320, RDX=0x0000000000000042
+RSP=0x00007f939013e798, RBP=0x00007f939013e7c0, RSI=0x0000000000000000, RDI=0x00007f92f20569e0
+R8 =0x00007f93913c99b0, R9 =0x0000000000000000, R10=0x0000000000000cea, R11=0x00007f93a544d558
+R12=0x0000000000000000, R13=0x0000000000000000, R14=0x00007f9391b11940, R15=0x00007f92f2056800
+RIP=0x00007f93a4e4e9fa, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f939013e798)
+0x00007f939013e798:   00007f93918ee7a1 00007f9391edbeb8
+0x00007f939013e7a8:   0000000000000000 00007f939013e870
+0x00007f939013e7b8:   00007f939013e840 00007f92f277d8f0
+0x00007f939013e7c8:   00007f93913d1b1d 00007f9391edbeb8
+0x00007f939013e7d8:   00007f939013e800 0000000000000000
+0x00007f939013e7e8:   00007f93913c99d3 00007f939013e870
+0x00007f939013e7f8:   00007f93918e7aef 00007f939013e850
+0x00007f939013e808:   00007f93a544d5f6 0000000000000000
+0x00007f939013e818:   00007f93a5b37276 00000005cd289b38
+0x00007f939013e828:   00007f93a64522c0 00000000b9a51367
+0x00007f939013e838:   00000005cd289b38 00000005cd52b360
+0x00007f939013e848:   00007f93a6223254 00007f939013e8d0
+0x00007f939013e858:   00007f93a4dec7d0 00007f939013e8d0
+0x00007f939013e868:   00007f93a4dec7d0 0000000000000000
+0x00007f939013e878:   00007f93a4decb10 00007f92e8003130
+0x00007f939013e888:   00000005cd289718 00007f939013e890
+0x00007f939013e898:   00007f9391eb044c 00007f939013e918
+0x00007f939013e8a8:   00007f9391ec8408 0000000000000000
+0x00007f939013e8b8:   00007f9391eb0588 00007f939013e870
+0x00007f939013e8c8:   00007f939013e910 00007f939013e960
+0x00007f939013e8d8:   00007f93a4decffd 0000000000000000
+0x00007f939013e8e8:   000000072f4fc568 0000000000000000
+0x00007f939013e8f8:   0000000000000000 0000000000000000
+0x00007f939013e908:   00000005cd289718 0000000000000000
+0x00007f939013e918:   00000005ccbe3780 00007f939013e920
+0x00007f939013e928:   00007f9391eb028d 00007f939013e970
+0x00007f939013e938:   00007f9391ec8408 0000000000000000
+0x00007f939013e948:   00007f9391eb0298 00007f939013e910
+0x00007f939013e958:   00007f939013e970 00007f939013e9b8
+0x00007f939013e968:   00007f93a4ded042 00000005ccbe3780
+0x00007f939013e978:   00007f939013e978 00007f93a1197993
+0x00007f939013e988:   00007f939013e9c8 00007f93a121f010 
+
+Instructions: (pc=0x00007f93a4e4e9fa)
+0x00007f93a4e4e9da:   00 00 00 00 00 00 44 8b 15 21 38 40 15 4c 8b ce
+0x00007f93a4e4e9ea:   41 f6 c2 01 0f 85 2e 00 00 00 4d 33 ca 4d 33 ca
+0x00007f93a4e4e9fa:   4d 8b 09 4c 8b da 49 c1 eb 02 4b 8b 04 19 49 bb
+0x00007f93a4e4ea0a:   08 22 25 ba 93 7f 00 00 4c 33 d8 4c 33 d8 45 3b 
+
+Register to memory mapping:
+
+RAX=0x00007f93ba2255c0: <offset 0xef65c0> in /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/server/libjvm.so at 0x00007f93b932f000
+RBX=0x00007f92f20569e0 is an unknown value
+RCX=0x00007f93baca9320: <offset 0x21a320> in /lib/x86_64-linux-gnu/libpthread.so.0 at 0x00007f93baa8f000
+RDX=0x0000000000000042 is an unknown value
+RSP=0x00007f939013e798 is pointing into the stack for thread: 0x00007f92f2056800
+RBP=0x00007f939013e7c0 is pointing into the stack for thread: 0x00007f92f2056800
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00007f92f20569e0 is an unknown value
+R8 =0x00007f93913c99b0: <offset 0x5c9b0> in /usr/lib/x86_64-linux-gnu/libX11.so.6 at 0x00007f939136d000
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000cea is an unknown value
+R11=0x00007f93a544d558 is at entry_point+24 in (nmethod*)0x00007f93a544d3d0
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x00007f9391b11940: <offset 0x25a940> in /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt_xawt.so at 0x00007f93918b7000
+R15=0x00007f92f2056800 is a thread
+
+
+Stack: [0x00007f939003f000,0x00007f9390140000],  sp=0x00007f939013e798,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+v  ~BufferBlob::jni_fast_GetLongField
+C  [libX11.so.6+0x64b1d]  _XimServerDestroy+0x3d
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 7107  sun.awt.X11.XlibWrapper.XFilterEvent(JJ)Z (0 bytes) @ 0x00007f93a544d584 [0x00007f93a544d540+0x44]
+j  sun.awt.X11.XToolkit.run(Z)V+300
+j  sun.awt.X11.XToolkit.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f92e41df800 JavaThread "MarlinRenderer Disposer" daemon [_thread_blocked, id=4117, stack(0x00007f9381c41000,0x00007f9381d42000)]
+=>0x00007f92f2056800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=3636, stack(0x00007f939003f000,0x00007f9390140000)]
+  0x00007f92f2038800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3635, stack(0x00007f939240e000,0x00007f939250f000)]
+  0x00007f92f1797000 JavaThread "Timer-0" daemon [_thread_blocked, id=3634, stack(0x00007f9399055000,0x00007f9399156000)]
+  0x00007f932c174800 JavaThread "Scheduler-1598745912" [_thread_blocked, id=3629, stack(0x00007f9398341000,0x00007f9398442000)]
+  0x00007f932c164800 JavaThread "qtp393098953-22" [_thread_blocked, id=3628, stack(0x00007f9398442000,0x00007f9398543000)]
+  0x00007f932c162800 JavaThread "qtp393098953-21" [_thread_blocked, id=3627, stack(0x00007f9398543000,0x00007f9398644000)]
+  0x00007f932c161000 JavaThread "qtp393098953-20" [_thread_blocked, id=3626, stack(0x00007f9398644000,0x00007f9398745000)]
+  0x00007f932c15f000 JavaThread "qtp393098953-19-acceptor-0@27d91ebe-ServerConnector@1980702b{HTTP/1.1,[http/1.1]}{0.0.0.0:34331}" [_thread_in_native, id=3625, stack(0x00007f9398745000,0x00007f9398846000)]
+  0x00007f932c15d800 JavaThread "qtp393098953-18" [_thread_in_native, id=3624, stack(0x00007f9398846000,0x00007f9398947000)]
+  0x00007f932c15b800 JavaThread "qtp393098953-17" [_thread_in_native, id=3623, stack(0x00007f9398947000,0x00007f9398a48000)]
+  0x00007f932c15a000 JavaThread "qtp393098953-16" [_thread_in_native, id=3622, stack(0x00007f9398a48000,0x00007f9398b49000)]
+  0x00007f932c159000 JavaThread "qtp393098953-15" [_thread_in_native, id=3621, stack(0x00007f9398b49000,0x00007f9398c4a000)]
+  0x00007f93b497a800 JavaThread "Thread-1" [_thread_in_native, id=3619, stack(0x00007f93993a1000,0x00007f93994a2000)]
+  0x00007f93b4b4e000 JavaThread "iothread-2" daemon [_thread_in_native, id=3618, stack(0x00007f93996a2000,0x00007f93997a3000)]
+  0x00007f93b4b12800 JavaThread "reaper-1" daemon [_thread_in_native, id=3617, stack(0x00007f93997a3000,0x00007f93998a4000)]
+  0x00007f93b40d8000 JavaThread "Service Thread" daemon [_thread_blocked, id=3615, stack(0x00007f939a60a000,0x00007f939a70b000)]
+  0x00007f93b40cc800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=3614, stack(0x00007f939a70c000,0x00007f939a80c000)]
+  0x00007f93b40ca800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=3613, stack(0x00007f939a80d000,0x00007f939a90d000)]
+  0x00007f93b40c8800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=3612, stack(0x00007f939a90e000,0x00007f939aa0e000)]
+  0x00007f93b40c6000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=3611, stack(0x00007f939aa0f000,0x00007f939ab0f000)]
+  0x00007f93b40c4800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3610, stack(0x00007f939ab0f000,0x00007f939ac10000)]
+  0x00007f93b4090800 JavaThread "Finalizer" daemon [_thread_blocked, id=3609, stack(0x00007f939aeef000,0x00007f939aff0000)]
+  0x00007f93b408c000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3608, stack(0x00007f939aff0000,0x00007f939b0f1000)]
+  0x00007f93b400e000 JavaThread "main" [_thread_blocked, id=3598, stack(0x00007f93badb2000,0x00007f93baeb2000)]
+
+Other Threads:
+  0x00007f93b4084000 VMThread [stack: 0x00007f939b0f2000,0x00007f939b1f2000] [id=3607]
+  0x00007f93b40da800 WatcherThread [stack: 0x00007f939a50a000,0x00007f939a60a000] [id=3616]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 311808K, used 164873K [0x0000000719380000, 0x000000072fe80000, 0x00000007c0000000)
+  eden space 293376K, 50% used [0x0000000719380000,0x00000007222c3008,0x000000072b200000)
+  from space 18432K, 98% used [0x000000072ec80000,0x000000072fe3f760,0x000000072fe80000)
+  to   space 29184K, 0% used [0x000000072c580000,0x000000072c580000,0x000000072e200000)
+ ParOldGen       total 476672K, used 40704K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 8% used [0x00000005cba00000,0x00000005ce1c0118,0x00000005e8b80000)
+ Metaspace       used 71911K, capacity 73001K, committed 73304K, reserved 1112064K
+  class space    used 9710K, capacity 10028K, committed 10112K, reserved 1048576K
+
+Card table byte_map: [0x00007f93a3a81000,0x00007f93a4a25000] byte_map_base: 0x00007f93a0c24000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f93ba251d00
+ Begin Bits: [0x00007f935c5d0000, 0x00007f93642e8000)
+ End Bits:   [0x00007f93642e8000, 0x00007f936c000000)
+
+Polling page: 0x00007f93baed2000
+
+CodeCache: size=245760Kb used=29772Kb max_used=29772Kb free=215987Kb
+ bounds [0x00007f93a4de5000, 0x00007f93a6b35000, 0x00007f93b3de5000]
+ total_blobs=8886 nmethods=7842 adapters=955
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 3514,675 Thread 0x00007f93b40cc800 9976       3       sun.awt.X11.XWindowPeer::focusAllowedFor (20 bytes)
+Event: 3514,676 Thread 0x00007f93b40cc800 nmethod 9976 0x00007f93a521d890 code [0x00007f93a521da20, 0x00007f93a521de08]
+Event: 3514,825 Thread 0x00007f93b40cc800 9978   !   3       java.awt.AWTEvent::setSource (95 bytes)
+Event: 3514,826 Thread 0x00007f93b40cc800 nmethod 9978 0x00007f93a521cc90 code [0x00007f93a521ce40, 0x00007f93a521d6c8]
+Event: 3514,962 Thread 0x00007f93b40cc800 9979       3       sun.awt.X11.XWindowPeer::isWMStateNetHidden (25 bytes)
+Event: 3514,964 Thread 0x00007f93b40cc800 nmethod 9979 0x00007f93a521c3d0 code [0x00007f93a521c580, 0x00007f93a521cae8]
+Event: 3514,965 Thread 0x00007f93b40cc800 9980       3       sun.awt.X11.XNETProtocol::isWMStateNetHidden (42 bytes)
+Event: 3514,966 Thread 0x00007f93b40cc800 nmethod 9980 0x00007f93a6b25010 code [0x00007f93a6b251e0, 0x00007f93a6b25858]
+Event: 3515,973 Thread 0x00007f93b40cc800 9981       3       java.util.IdentityHashMap$ValueIterator::next (12 bytes)
+Event: 3515,973 Thread 0x00007f93b40cc800 nmethod 9981 0x00007f93a5bb8c10 code [0x00007f93a5bb8d80, 0x00007f93a5bb8fc8]
+
+GC Heap History (10 events):
+Event: 1689,319 GC heap before
+{Heap before GC invocations=25 (full 3):
+ PSYoungGen      total 343040K, used 342982K [0x0000000719380000, 0x0000000732880000, 0x00000007c0000000)
+  eden space 324608K, 100% used [0x0000000719380000,0x000000072d080000,0x000000072d080000)
+  from space 18432K, 99% used [0x0000000730500000,0x00000007316f1b30,0x0000000731700000)
+  to   space 17920K, 0% used [0x0000000731700000,0x0000000731700000,0x0000000732880000)
+ ParOldGen       total 476672K, used 32076K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 6% used [0x00000005cba00000,0x00000005cd9532c8,0x00000005e8b80000)
+ Metaspace       used 71235K, capacity 72151K, committed 72408K, reserved 1112064K
+  class space    used 9666K, capacity 9891K, committed 9984K, reserved 1048576K
+Event: 1689,325 GC heap after
+Heap after GC invocations=25 (full 3):
+ PSYoungGen      total 335872K, used 17918K [0x0000000719380000, 0x0000000732880000, 0x00000007c0000000)
+  eden space 317952K, 0% used [0x0000000719380000,0x0000000719380000,0x000000072ca00000)
+  from space 17920K, 99% used [0x0000000731700000,0x000000073287fae8,0x0000000732880000)
+  to   space 28160K, 0% used [0x000000072f180000,0x000000072f180000,0x0000000730d00000)
+ ParOldGen       total 476672K, used 34574K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 7% used [0x00000005cba00000,0x00000005cdbc39c8,0x00000005e8b80000)
+ Metaspace       used 71235K, capacity 72151K, committed 72408K, reserved 1112064K
+  class space    used 9666K, capacity 9891K, committed 9984K, reserved 1048576K
+}
+Event: 1811,071 GC heap before
+{Heap before GC invocations=26 (full 3):
+ PSYoungGen      total 335872K, used 335870K [0x0000000719380000, 0x0000000732880000, 0x00000007c0000000)
+  eden space 317952K, 100% used [0x0000000719380000,0x000000072ca00000,0x000000072ca00000)
+  from space 17920K, 99% used [0x0000000731700000,0x000000073287fae8,0x0000000732880000)
+  to   space 28160K, 0% used [0x000000072f180000,0x000000072f180000,0x0000000730d00000)
+ ParOldGen       total 476672K, used 34574K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 7% used [0x00000005cba00000,0x00000005cdbc39c8,0x00000005e8b80000)
+ Metaspace       used 71552K, capacity 72567K, committed 72664K, reserved 1112064K
+  class space    used 9682K, capacity 9961K, committed 9984K, reserved 1048576K
+Event: 1811,077 GC heap after
+Heap after GC invocations=26 (full 3):
+ PSYoungGen      total 332288K, used 20822K [0x0000000719380000, 0x0000000731780000, 0x00000007c0000000)
+  eden space 311296K, 0% used [0x0000000719380000,0x0000000719380000,0x000000072c380000)
+  from space 20992K, 99% used [0x000000072f180000,0x00000007305d5a90,0x0000000730600000)
+  to   space 17920K, 0% used [0x0000000730600000,0x0000000730600000,0x0000000731780000)
+ ParOldGen       total 476672K, used 34582K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 7% used [0x00000005cba00000,0x00000005cdbc59c8,0x00000005e8b80000)
+ Metaspace       used 71552K, capacity 72567K, committed 72664K, reserved 1112064K
+  class space    used 9682K, capacity 9961K, committed 9984K, reserved 1048576K
+}
+Event: 2456,406 GC heap before
+{Heap before GC invocations=27 (full 3):
+ PSYoungGen      total 332288K, used 332118K [0x0000000719380000, 0x0000000731780000, 0x00000007c0000000)
+  eden space 311296K, 100% used [0x0000000719380000,0x000000072c380000,0x000000072c380000)
+  from space 20992K, 99% used [0x000000072f180000,0x00000007305d5a90,0x0000000730600000)
+  to   space 17920K, 0% used [0x0000000730600000,0x0000000730600000,0x0000000731780000)
+ ParOldGen       total 476672K, used 34582K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 7% used [0x00000005cba00000,0x00000005cdbc59c8,0x00000005e8b80000)
+ Metaspace       used 71638K, capacity 72651K, committed 72920K, reserved 1112064K
+  class space    used 9685K, capacity 9965K, committed 9984K, reserved 1048576K
+Event: 2456,416 GC heap after
+Heap after GC invocations=27 (full 3):
+ PSYoungGen      total 323072K, used 17906K [0x0000000719380000, 0x0000000731780000, 0x00000007c0000000)
+  eden space 305152K, 0% used [0x0000000719380000,0x0000000719380000,0x000000072bd80000)
+  from space 17920K, 99% used [0x0000000730600000,0x000000073177c8e0,0x0000000731780000)
+  to   space 30720K, 0% used [0x000000072db80000,0x000000072db80000,0x000000072f980000)
+ ParOldGen       total 476672K, used 38948K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 8% used [0x00000005cba00000,0x00000005ce009088,0x00000005e8b80000)
+ Metaspace       used 71638K, capacity 72651K, committed 72920K, reserved 1112064K
+  class space    used 9685K, capacity 9965K, committed 9984K, reserved 1048576K
+}
+Event: 2526,387 GC heap before
+{Heap before GC invocations=28 (full 3):
+ PSYoungGen      total 323072K, used 323058K [0x0000000719380000, 0x0000000731780000, 0x00000007c0000000)
+  eden space 305152K, 100% used [0x0000000719380000,0x000000072bd80000,0x000000072bd80000)
+  from space 17920K, 99% used [0x0000000730600000,0x000000073177c8e0,0x0000000731780000)
+  to   space 30720K, 0% used [0x000000072db80000,0x000000072db80000,0x000000072f980000)
+ ParOldGen       total 476672K, used 38948K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 8% used [0x00000005cba00000,0x00000005ce009088,0x00000005e8b80000)
+ Metaspace       used 71700K, capacity 72701K, committed 72920K, reserved 1112064K
+  class space    used 9693K, capacity 9978K, committed 9984K, reserved 1048576K
+Event: 2526,396 GC heap after
+Heap after GC invocations=28 (full 3):
+ PSYoungGen      total 316416K, used 17097K [0x0000000719380000, 0x0000000730680000, 0x00000007c0000000)
+  eden space 299008K, 0% used [0x0000000719380000,0x0000000719380000,0x000000072b780000)
+  from space 17408K, 98% used [0x000000072db80000,0x000000072ec32460,0x000000072ec80000)
+  to   space 26624K, 0% used [0x000000072ec80000,0x000000072ec80000,0x0000000730680000)
+ ParOldGen       total 476672K, used 40696K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 8% used [0x00000005cba00000,0x00000005ce1be118,0x00000005e8b80000)
+ Metaspace       used 71700K, capacity 72701K, committed 72920K, reserved 1112064K
+  class space    used 9693K, capacity 9978K, committed 9984K, reserved 1048576K
+}
+Event: 2834,202 GC heap before
+{Heap before GC invocations=29 (full 3):
+ PSYoungGen      total 316416K, used 316105K [0x0000000719380000, 0x0000000730680000, 0x00000007c0000000)
+  eden space 299008K, 100% used [0x0000000719380000,0x000000072b780000,0x000000072b780000)
+  from space 17408K, 98% used [0x000000072db80000,0x000000072ec32460,0x000000072ec80000)
+  to   space 26624K, 0% used [0x000000072ec80000,0x000000072ec80000,0x0000000730680000)
+ ParOldGen       total 476672K, used 40696K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 8% used [0x00000005cba00000,0x00000005ce1be118,0x00000005e8b80000)
+ Metaspace       used 71822K, capacity 72949K, committed 73304K, reserved 1112064K
+  class space    used 9702K, capacity 9992K, committed 10112K, reserved 1048576K
+Event: 2834,208 GC heap after
+Heap after GC invocations=29 (full 3):
+ PSYoungGen      total 311808K, used 18173K [0x0000000719380000, 0x000000072fe80000, 0x00000007c0000000)
+  eden space 293376K, 0% used [0x0000000719380000,0x0000000719380000,0x000000072b200000)
+  from space 18432K, 98% used [0x000000072ec80000,0x000000072fe3f760,0x000000072fe80000)
+  to   space 29184K, 0% used [0x000000072c580000,0x000000072c580000,0x000000072e200000)
+ ParOldGen       total 476672K, used 40704K [0x00000005cba00000, 0x00000005e8b80000, 0x0000000719380000)
+  object space 476672K, 8% used [0x00000005cba00000,0x00000005ce1c0118,0x00000005e8b80000)
+ Metaspace       used 71822K, capacity 72949K, committed 73304K, reserved 1112064K
+  class space    used 9702K, capacity 9992K, committed 10112K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 2174,803 Thread 0x00007f92c40c7000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a6126624 method=sun.java2d.marlin.FloatMath.ceil_int(F)I @ 7
+Event: 2456,416 Thread 0x00007f93b497a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a60824c0 method=org.antlr.v4.runtime.atn.ParserATNSimulator.execATN(Lorg/antlr/v4/runtime/dfa/DFA;Lorg/antlr/v4/runtime/dfa/DFAState;Lorg/antlr/v4/runtime/TokenStream;ILorg/antlr/v4/runtime
+Event: 2456,417 Thread 0x00007f93b497a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a65c1888 method=org.antlr.v4.runtime.Parser.match(I)Lorg/antlr/v4/runtime/Token; @ 12
+Event: 2461,460 Thread 0x00007f92e423b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a533acac method=groovyjarjarasm.asm.Type.getArgumentsAndReturnSizes(Ljava/lang/String;)I @ 41
+Event: 2526,471 Thread 0x00007f92e423b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a6634a68 method=ij.process.ShortProcessor.getHistogram()[I @ 52
+Event: 2567,103 Thread 0x00007f92f2056800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a67a7ab0 method=sun.awt.X11.XWindow.getModifiers(III)I @ 116
+Event: 2799,517 Thread 0x00007f92ec011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a524b930 method=java.lang.Math.round(D)J @ 48
+Event: 2816,115 Thread 0x00007f92ec011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a6ab4afc method=ij.process.ShortStatistics.calculateMoments(Lij/process/ImageProcessor;II[F)V @ 56
+Event: 2834,208 Thread 0x00007f93b4090800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a5266328 method=java.util.WeakHashMap.expungeStaleEntries()V @ 9
+Event: 3509,770 Thread 0x00007f92e0263800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f93a687c624 method=sun.awt.X11.XComponentPeer.handleEvent(Ljava/awt/AWTEvent;)V @ 93
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 2850,855 Thread 0x00007f92ec011800 Exception <a 'java/security/PrivilegedActionException'> (0x000000071d820e78) thrown at [/jonnyzzz/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 2850,908 Thread 0x00007f92ec011800 Exception <a 'java/lang/ClassNotFoundException': script1540779773275BeanInfo> (0x0000000720964030) thrown at [/jonnyzzz/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2850,909 Thread 0x00007f92ec011800 Exception <a 'java/lang/ClassNotFoundException': groovy/lang/ScriptBeanInfo> (0x00000007209b4140) thrown at [/jonnyzzz/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2850,910 Thread 0x00007f92ec011800 Exception <a 'java/lang/ClassNotFoundException': groovy/lang/GroovyObjectSupportBeanInfo> (0x0000000720a1c318) thrown at [/jonnyzzz/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2850,910 Thread 0x00007f92ec011800 Exception <a 'java/lang/ClassNotFoundException': java/lang/ObjectBeanInfo> (0x0000000720a64dd0) thrown at [/jonnyzzz/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2850,910 Thread 0x00007f92ec011800 Exception <a 'java/lang/ClassNotFoundException': java/lang/ObjectCustomizer> (0x0000000720ab0df0) thrown at [/jonnyzzz/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2850,911 Thread 0x00007f92ec011800 Exception <a 'java/lang/ClassNotFoundException': groovy/lang/GroovyObjectSupportCustomizer> (0x0000000720b1e210) thrown at [/jonnyzzz/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2850,911 Thread 0x00007f92ec011800 Exception <a 'java/lang/ClassNotFoundException': groovy/lang/ScriptCustomizer> (0x0000000720b77600) thrown at [/jonnyzzz/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2850,912 Thread 0x00007f92ec011800 Exception <a 'java/lang/ClassNotFoundException': script1540779773275Customizer> (0x0000000720c20b98) thrown at [/jonnyzzz/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2850,996 Thread 0x00007f92e0263800 Exception <a 'java/lang/UnsupportedOperationException': > (0x00000007213e7f68) thrown at [/jonnyzzz/hotspot/src/share/vm/prims/jni.cpp, line 735]
+
+Events (10 events):
+Event: 3514,951 Thread 0x00007f92c40df800 Thread added: 0x00007f92c40df800
+Event: 3514,963 Executing VM operation: BulkRevokeBias
+Event: 3514,964 Executing VM operation: BulkRevokeBias done
+Event: 3514,967 Executing VM operation: RevokeBias
+Event: 3514,967 Executing VM operation: RevokeBias done
+Event: 3514,967 Thread 0x00007f92c40df800 Thread exited: 0x00007f92c40df800
+Event: 3514,972 Executing VM operation: BulkRevokeBias
+Event: 3514,973 Executing VM operation: BulkRevokeBias done
+Event: 3515,973 Thread 0x00007f92e00d0800 Thread exited: 0x00007f92e00d0800
+Event: 3515,973 Thread 0x00007f92e0263800 Thread exited: 0x00007f92e0263800
+
+
+Dynamic libraries:
+003ff000-00400000 rw-p 00000000 fd:01 24914147                           /home/baecker/anaconda3/envs/beaker/bin/java
+00400000-00401000 r-xp 00001000 fd:01 24914147                           /home/baecker/anaconda3/envs/beaker/bin/java
+00600000-00601000 rw-p 00001000 fd:01 24914147                           /home/baecker/anaconda3/envs/beaker/bin/java
+02333000-02354000 rw-p 00000000 00:00 0                                  [heap]
+5cba00000-5e8b80000 rw-p 00000000 00:00 0 
+5e8b80000-719380000 ---p 00000000 00:00 0 
+719380000-72fe80000 rw-p 00000000 00:00 0 
+72fe80000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c09e0000 rw-p 00000000 00:00 0 
+7c09e0000-800000000 ---p 00000000 00:00 0 
+7f92a0000000-7f92a0021000 rw-p 00000000 00:00 0 
+7f92a0021000-7f92a4000000 ---p 00000000 00:00 0 
+7f92a8000000-7f92a8021000 rw-p 00000000 00:00 0 
+7f92a8021000-7f92ac000000 ---p 00000000 00:00 0 
+7f92ac000000-7f92ac027000 rw-p 00000000 00:00 0 
+7f92ac027000-7f92b0000000 ---p 00000000 00:00 0 
+7f92b0000000-7f92b0021000 rw-p 00000000 00:00 0 
+7f92b0021000-7f92b4000000 ---p 00000000 00:00 0 
+7f92b4000000-7f92b4021000 rw-p 00000000 00:00 0 
+7f92b4021000-7f92b8000000 ---p 00000000 00:00 0 
+7f92b8000000-7f92b8021000 rw-p 00000000 00:00 0 
+7f92b8021000-7f92bc000000 ---p 00000000 00:00 0 
+7f92bc000000-7f92bc077000 rw-p 00000000 00:00 0 
+7f92bc077000-7f92c0000000 ---p 00000000 00:00 0 
+7f92c0b8b000-7f92c0b8c000 ---p 00000000 00:00 0 
+7f92c0b8c000-7f92c138c000 rw-p 00000000 00:00 0 
+7f92c138c000-7f92c138d000 ---p 00000000 00:00 0 
+7f92c138d000-7f92c1b8d000 rw-p 00000000 00:00 0 
+7f92c1b8d000-7f92c1b8e000 ---p 00000000 00:00 0 
+7f92c1b8e000-7f92c238e000 rw-p 00000000 00:00 0 
+7f92c238e000-7f92c23f2000 r-xp 00000000 fd:01 15599957                   /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.517
+7f92c23f2000-7f92c25f2000 ---p 00064000 fd:01 15599957                   /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.517
+7f92c25f2000-7f92c25f4000 r--p 00064000 fd:01 15599957                   /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.517
+7f92c25f4000-7f92c25f5000 rw-p 00066000 fd:01 15599957                   /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.517
+7f92c25f5000-7f92c25fb000 r-xp 00000000 fd:01 15862403                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f92c25fb000-7f92c27fb000 ---p 00006000 fd:01 15862403                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f92c27fb000-7f92c27fc000 r--p 00006000 fd:01 15862403                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f92c27fc000-7f92c27fd000 rw-p 00007000 fd:01 15862403                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f92c2ffe000-7f92c2fff000 ---p 00000000 00:00 0 
+7f92c2fff000-7f92c37ff000 rw-p 00000000 00:00 0 
+7f92c4000000-7f92c41d7000 rw-p 00000000 00:00 0 
+7f92c41d7000-7f92c8000000 ---p 00000000 00:00 0 
+7f92c8039000-7f92c8070000 r-xp 00000000 fd:01 15597998                   /usr/lib/x86_64-linux-gnu/libcroco-0.6.so.3.0.1
+7f92c8070000-7f92c8270000 ---p 00037000 fd:01 15597998                   /usr/lib/x86_64-linux-gnu/libcroco-0.6.so.3.0.1
+7f92c8270000-7f92c8273000 r--p 00037000 fd:01 15597998                   /usr/lib/x86_64-linux-gnu/libcroco-0.6.so.3.0.1
+7f92c8273000-7f92c8274000 rw-p 0003a000 fd:01 15597998                   /usr/lib/x86_64-linux-gnu/libcroco-0.6.so.3.0.1
+7f92c8274000-7f92c82aa000 r-xp 00000000 fd:01 15605670                   /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.40.20
+7f92c82aa000-7f92c84aa000 ---p 00036000 fd:01 15605670                   /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.40.20
+7f92c84aa000-7f92c84ab000 r--p 00036000 fd:01 15605670                   /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.40.20
+7f92c84ab000-7f92c84ac000 rw-p 00037000 fd:01 15605670                   /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.40.20
+7f92c84ac000-7f92c84ad000 ---p 00000000 00:00 0 
+7f92c84ad000-7f92c8cad000 rw-p 00000000 00:00 0 
+7f92c8cad000-7f92d6d74000 r-xp 00000000 fd:01 15602159                   /usr/java/packages/lib/amd64/libSimpleITKJava.so
+7f92d6d74000-7f92d6f73000 ---p 0e0c7000 fd:01 15602159                   /usr/java/packages/lib/amd64/libSimpleITKJava.so
+7f92d6f73000-7f92d7fe1000 rw-p 0e0c6000 fd:01 15602159                   /usr/java/packages/lib/amd64/libSimpleITKJava.so
+7f92d7fe1000-7f92d8000000 rw-p 00000000 00:00 0 
+7f92d8000000-7f92d847f000 rw-p 00000000 00:00 0 
+7f92d847f000-7f92dc000000 ---p 00000000 00:00 0 
+7f92dc000000-7f92dc021000 rw-p 00000000 00:00 0 
+7f92dc021000-7f92e0000000 ---p 00000000 00:00 0 
+7f92e0000000-7f92e0623000 rw-p 00000000 00:00 0 
+7f92e0623000-7f92e4000000 ---p 00000000 00:00 0 
+7f92e4000000-7f92e43ff000 rw-p 00000000 00:00 0 
+7f92e43ff000-7f92e8000000 ---p 00000000 00:00 0 
+7f92e8000000-7f92e8295000 rw-p 00000000 00:00 0 
+7f92e8295000-7f92ec000000 ---p 00000000 00:00 0 
+7f92ec000000-7f92ec13c000 rw-p 00000000 00:00 0 
+7f92ec13c000-7f92f0000000 ---p 00000000 00:00 0 
+7f92f0000000-7f92f294e000 rw-p 00000000 00:00 0 
+7f92f294e000-7f92f4000000 ---p 00000000 00:00 0 
+7f92f4000000-7f92f4021000 rw-p 00000000 00:00 0 
+7f92f4021000-7f92f8000000 ---p 00000000 00:00 0 
+7f92f8000000-7f92f8021000 rw-p 00000000 00:00 0 
+7f92f8021000-7f92fc000000 ---p 00000000 00:00 0 
+7f92fc000000-7f92fc2b9000 rw-p 00000000 00:00 0 
+7f92fc2b9000-7f9300000000 ---p 00000000 00:00 0 
+7f9300000000-7f9300021000 rw-p 00000000 00:00 0 
+7f9300021000-7f9304000000 ---p 00000000 00:00 0 
+7f9304000000-7f9304021000 rw-p 00000000 00:00 0 
+7f9304021000-7f9308000000 ---p 00000000 00:00 0 
+7f9308000000-7f9308021000 rw-p 00000000 00:00 0 
+7f9308021000-7f930c000000 ---p 00000000 00:00 0 
+7f930c000000-7f930c021000 rw-p 00000000 00:00 0 
+7f930c021000-7f9310000000 ---p 00000000 00:00 0 
+7f9310000000-7f9310021000 rw-p 00000000 00:00 0 
+7f9310021000-7f9314000000 ---p 00000000 00:00 0 
+7f9314000000-7f9314021000 rw-p 00000000 00:00 0 
+7f9314021000-7f9318000000 ---p 00000000 00:00 0 
+7f9318000000-7f9318021000 rw-p 00000000 00:00 0 
+7f9318021000-7f931c000000 ---p 00000000 00:00 0 
+7f931c000000-7f931c021000 rw-p 00000000 00:00 0 
+7f931c021000-7f9320000000 ---p 00000000 00:00 0 
+7f9320000000-7f9320032000 rw-p 00000000 00:00 0 
+7f9320032000-7f9324000000 ---p 00000000 00:00 0 
+7f9324000000-7f9324021000 rw-p 00000000 00:00 0 
+7f9324021000-7f9328000000 ---p 00000000 00:00 0 
+7f9328000000-7f932806e000 rw-p 00000000 00:00 0 
+7f932806e000-7f932c000000 ---p 00000000 00:00 0 
+7f932c000000-7f932c515000 rw-p 00000000 00:00 0 
+7f932c515000-7f9330000000 ---p 00000000 00:00 0 
+7f9330000000-7f9330021000 rw-p 00000000 00:00 0 
+7f9330021000-7f9334000000 ---p 00000000 00:00 0 
+7f9334000000-7f9334021000 rw-p 00000000 00:00 0 
+7f9334021000-7f9338000000 ---p 00000000 00:00 0 
+7f9338000000-7f9338c2a000 rw-p 00000000 00:00 0 
+7f9338c2a000-7f933c000000 ---p 00000000 00:00 0 
+7f933c000000-7f933c021000 rw-p 00000000 00:00 0 
+7f933c021000-7f9340000000 ---p 00000000 00:00 0 
+7f9340000000-7f9342224000 rw-p 00000000 00:00 0 
+7f9342224000-7f9344000000 ---p 00000000 00:00 0 
+7f9344000000-7f93460c1000 rw-p 00000000 00:00 0 
+7f93460c1000-7f9348000000 ---p 00000000 00:00 0 
+7f9348000000-7f9348021000 rw-p 00000000 00:00 0 
+7f9348021000-7f934c000000 ---p 00000000 00:00 0 
+7f934c000000-7f934da00000 rw-p 00000000 00:00 0 
+7f934da00000-7f9350000000 ---p 00000000 00:00 0 
+7f9350000000-7f9350021000 rw-p 00000000 00:00 0 
+7f9350021000-7f9354000000 ---p 00000000 00:00 0 
+7f9354000000-7f9354021000 rw-p 00000000 00:00 0 
+7f9354021000-7f9358000000 ---p 00000000 00:00 0 
+7f9358000000-7f935811d000 rw-p 00000000 00:00 0 
+7f935811d000-7f935c000000 ---p 00000000 00:00 0 
+7f935c1c7000-7f935c1c9000 r-xp 00000000 fd:01 15861535                   /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+7f935c1c9000-7f935c3c8000 ---p 00002000 fd:01 15861535                   /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+7f935c3c8000-7f935c3c9000 r--p 00001000 fd:01 15861535                   /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+7f935c3c9000-7f935c3ca000 rw-p 00002000 fd:01 15861535                   /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+7f935c3ca000-7f935c3cf000 r-xp 00000000 fd:01 15860048                   /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+7f935c3cf000-7f935c5ce000 ---p 00005000 fd:01 15860048                   /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+7f935c5ce000-7f935c5cf000 r--p 00004000 fd:01 15860048                   /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+7f935c5cf000-7f935c5d0000 rw-p 00005000 fd:01 15860048                   /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+7f935c5d0000-7f936c000000 rw-p 00000000 00:00 0 
+7f936c000000-7f936c021000 rw-p 00000000 00:00 0 
+7f936c021000-7f9370000000 ---p 00000000 00:00 0 
+7f9370000000-7f9370021000 rw-p 00000000 00:00 0 
+7f9370021000-7f9374000000 ---p 00000000 00:00 0 
+7f9374000000-7f9374021000 rw-p 00000000 00:00 0 
+7f9374021000-7f9378000000 ---p 00000000 00:00 0 
+7f9378122000-7f9378174000 r--p 00000000 fd:01 17961191                   /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf
+7f9378174000-7f937817b000 r-xp 00000000 fd:01 15606287                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f937817b000-7f937837b000 ---p 00007000 fd:01 15606287                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f937837b000-7f937837c000 r--p 00007000 fd:01 15606287                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f937837c000-7f937837d000 rw-p 00008000 fd:01 15606287                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f937837d000-7f93783a7000 r-xp 00000000 fd:01 15603490                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+7f93783a7000-7f93785a6000 ---p 0002a000 fd:01 15603490                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+7f93785a6000-7f93785a7000 r--p 00029000 fd:01 15603490                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+7f93785a7000-7f93785a8000 rw-p 0002a000 fd:01 15603490                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+7f93785a8000-7f93785b1000 r-xp 00000000 fd:01 15606181                   /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1
+7f93785b1000-7f93787b0000 ---p 00009000 fd:01 15606181                   /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1
+7f93787b0000-7f93787b1000 r--p 00008000 fd:01 15606181                   /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1
+7f93787b1000-7f93787b2000 rw-p 00009000 fd:01 15606181                   /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1
+7f93787b2000-7f93787c7000 r-xp 00000000 fd:01 15606488                   /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.15
+7f93787c7000-7f93789c6000 ---p 00015000 fd:01 15606488                   /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.15
+7f93789c6000-7f93789c7000 r--p 00014000 fd:01 15606488                   /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.15
+7f93789c7000-7f93789c8000 rw-p 00015000 fd:01 15606488                   /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.15
+7f93789c8000-7f93789cf000 r-xp 00000000 fd:01 15606007                   /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.7
+7f93789cf000-7f9378bce000 ---p 00007000 fd:01 15606007                   /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.7
+7f9378bce000-7f9378bcf000 r--p 00006000 fd:01 15606007                   /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.7
+7f9378bcf000-7f9378bd0000 rw-p 00007000 fd:01 15606007                   /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.7
+7f9378bd0000-7f9378be0000 r-xp 00000000 fd:01 15598418                   /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7f9378be0000-7f9378de0000 ---p 00010000 fd:01 15598418                   /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7f9378de0000-7f9378de1000 r--p 00010000 fd:01 15598418                   /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7f9378de1000-7f9378de2000 rw-p 00011000 fd:01 15598418                   /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7f9378de2000-7f9378de6000 r-xp 00000000 fd:01 15600904                   /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7f9378de6000-7f9378fe5000 ---p 00004000 fd:01 15600904                   /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7f9378fe5000-7f9378fe6000 r--p 00003000 fd:01 15600904                   /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7f9378fe6000-7f9378fe7000 rw-p 00004000 fd:01 15600904                   /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7f9378fe7000-7f9378fec000 r-xp 00000000 fd:01 15862405                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9378fec000-7f93791ec000 ---p 00005000 fd:01 15862405                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7f93791ec000-7f93791ed000 r--p 00005000 fd:01 15862405                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7f93791ed000-7f93791ee000 rw-p 00006000 fd:01 15862405                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7f93791ee000-7f9379228000 r-xp 00000000 fd:01 15862402                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7f9379228000-7f9379428000 ---p 0003a000 fd:01 15862402                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7f9379428000-7f9379429000 r--p 0003a000 fd:01 15862402                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7f9379429000-7f937942a000 rw-p 0003b000 fd:01 15862402                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7f937942a000-7f937942b000 r-xp 00000000 fd:01 21648325                   /home/baecker/anaconda3/envs/beaker/lib/libgthread-2.0.so.0.5600.2
+7f937942b000-7f937962a000 ---p 00001000 fd:01 21648325                   /home/baecker/anaconda3/envs/beaker/lib/libgthread-2.0.so.0.5600.2
+7f937962a000-7f937962b000 rw-p 00000000 fd:01 21648325                   /home/baecker/anaconda3/envs/beaker/lib/libgthread-2.0.so.0.5600.2
+7f937962b000-7f9379631000 r-xp 00000000 fd:01 15597874                   /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.3
+7f9379631000-7f9379830000 ---p 00006000 fd:01 15597874                   /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.3
+7f9379830000-7f9379831000 r--p 00005000 fd:01 15597874                   /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.3
+7f9379831000-7f9379832000 rw-p 00006000 fd:01 15597874                   /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.3
+7f9379832000-7f937985d000 r-xp 00000000 fd:01 15598391                   /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7f937985d000-7f9379a5c000 ---p 0002b000 fd:01 15598391                   /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7f9379a5c000-7f9379a5e000 r--p 0002a000 fd:01 15598391                   /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7f9379a5e000-7f9379a5f000 rw-p 0002c000 fd:01 15598391                   /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7f9379a5f000-7f9379a67000 r-xp 00000000 fd:01 15597876                   /usr/lib/x86_64-linux-gnu/libthai.so.0.3.0
+7f9379a67000-7f9379c66000 ---p 00008000 fd:01 15597876                   /usr/lib/x86_64-linux-gnu/libthai.so.0.3.0
+7f9379c66000-7f9379c67000 r--p 00007000 fd:01 15597876                   /usr/lib/x86_64-linux-gnu/libthai.so.0.3.0
+7f9379c67000-7f9379c68000 rw-p 00008000 fd:01 15597876                   /usr/lib/x86_64-linux-gnu/libthai.so.0.3.0
+7f9379c68000-7f9379d04000 r-xp 00000000 fd:01 15598429                   /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.10702.0
+7f9379d04000-7f9379f04000 ---p 0009c000 fd:01 15598429                   /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.10702.0
+7f9379f04000-7f9379f05000 r--p 0009c000 fd:01 15598429                   /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.10702.0
+7f9379f05000-7f9379f06000 rw-p 0009d000 fd:01 15598429                   /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.10702.0
+7f9379f06000-7f9379f1d000 r-xp 00000000 fd:01 7611216                    /lib/x86_64-linux-gnu/libresolv-2.27.so
+7f9379f1d000-7f937a11d000 ---p 00017000 fd:01 7611216                    /lib/x86_64-linux-gnu/libresolv-2.27.so
+7f937a11d000-7f937a11e000 r--p 00017000 fd:01 7611216                    /lib/x86_64-linux-gnu/libresolv-2.27.so
+7f937a11e000-7f937a11f000 rw-p 00018000 fd:01 7611216                    /lib/x86_64-linux-gnu/libresolv-2.27.so
+7f937a11f000-7f937a121000 rw-p 00000000 00:00 0 
+7f937a121000-7f937a12d000 r-xp 00000000 fd:01 22952045                   /home/baecker/anaconda3/envs/beaker/lib/libffi.so.6.0.4
+7f937a12d000-7f937a32d000 ---p 0000c000 fd:01 22952045                   /home/baecker/anaconda3/envs/beaker/lib/libffi.so.6.0.4
+7f937a32d000-7f937a32e000 rw-p 0000c000 fd:01 22952045                   /home/baecker/anaconda3/envs/beaker/lib/libffi.so.6.0.4
+7f937a32e000-7f937a33e000 r-xp 00000000 fd:01 11147445                   /home/baecker/anaconda3/envs/beaker/lib/libxcb-render.so.0.0.0
+7f937a33e000-7f937a53d000 ---p 00010000 fd:01 11147445                   /home/baecker/anaconda3/envs/beaker/lib/libxcb-render.so.0.0.0
+7f937a53d000-7f937a53e000 rw-p 0000f000 fd:01 11147445                   /home/baecker/anaconda3/envs/beaker/lib/libxcb-render.so.0.0.0
+7f937a53e000-7f937a541000 r-xp 00000000 fd:01 11147407                   /home/baecker/anaconda3/envs/beaker/lib/libxcb-shm.so.0.0.0
+7f937a541000-7f937a740000 ---p 00003000 fd:01 11147407                   /home/baecker/anaconda3/envs/beaker/lib/libxcb-shm.so.0.0.0
+7f937a740000-7f937a741000 rw-p 00002000 fd:01 11147407                   /home/baecker/anaconda3/envs/beaker/lib/libxcb-shm.so.0.0.0
+7f937a741000-7f937a7de000 r-xp 00000000 fd:01 15597806                   /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.34.0
+7f937a7de000-7f937a9dd000 ---p 0009d000 fd:01 15597806                   /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.34.0
+7f937a9dd000-7f937a9e5000 r--p 0009c000 fd:01 15597806                   /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.34.0
+7f937a9e5000-7f937a9e6000 rw-p 000a4000 fd:01 15597806                   /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.34.0
+7f937a9e6000-7f937aa36000 r-xp 00000000 fd:01 21366978                   /home/baecker/anaconda3/envs/beaker/lib/libpcre.so.1.2.9
+7f937aa36000-7f937ac36000 ---p 00050000 fd:01 21366978                   /home/baecker/anaconda3/envs/beaker/lib/libpcre.so.1.2.9
+7f937ac36000-7f937ac37000 rw-p 00050000 fd:01 21366978                   /home/baecker/anaconda3/envs/beaker/lib/libpcre.so.1.2.9
+7f937ac37000-7f937ac39000 r-xp 00000000 fd:01 15605473                   /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f937ac39000-7f937ae38000 ---p 00002000 fd:01 15605473                   /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f937ae38000-7f937ae39000 r--p 00001000 fd:01 15605473                   /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f937ae39000-7f937ae3a000 rw-p 00002000 fd:01 15605473                   /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f937ae3a000-7f937ae3c000 r-xp 00000000 fd:01 15605469                   /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f937ae3c000-7f937b03b000 ---p 00002000 fd:01 15605469                   /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f937b03b000-7f937b03c000 r--p 00001000 fd:01 15605469                   /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f937b03c000-7f937b03d000 rw-p 00002000 fd:01 15605469                   /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f937b03d000-7f937b047000 r-xp 00000000 fd:01 15605497                   /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f937b047000-7f937b246000 ---p 0000a000 fd:01 15605497                   /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f937b246000-7f937b247000 r--p 00009000 fd:01 15605497                   /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f937b247000-7f937b248000 rw-p 0000a000 fd:01 15605497                   /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f937b248000-7f937b24a000 r-xp 00000000 fd:01 15605489                   /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f937b24a000-7f937b449000 ---p 00002000 fd:01 15605489                   /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f937b449000-7f937b44a000 r--p 00001000 fd:01 15605489                   /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f937b44a000-7f937b44b000 rw-p 00002000 fd:01 15605489                   /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f937b44b000-7f937b579000 r-xp 00000000 fd:01 23080466                   /home/baecker/anaconda3/envs/beaker/lib/libglib-2.0.so.0.5600.2
+7f937b579000-7f937b779000 ---p 0012e000 fd:01 23080466                   /home/baecker/anaconda3/envs/beaker/lib/libglib-2.0.so.0.5600.2
+7f937b779000-7f937b77b000 rw-p 0012e000 fd:01 23080466                   /home/baecker/anaconda3/envs/beaker/lib/libglib-2.0.so.0.5600.2
+7f937b77b000-7f937b7ce000 r-xp 00000000 fd:01 21648332                   /home/baecker/anaconda3/envs/beaker/lib/libgobject-2.0.so.0.5600.2
+7f937b7ce000-7f937b9cd000 ---p 00053000 fd:01 21648332                   /home/baecker/anaconda3/envs/beaker/lib/libgobject-2.0.so.0.5600.2
+7f937b9cd000-7f937b9cf000 rw-p 00052000 fd:01 21648332                   /home/baecker/anaconda3/envs/beaker/lib/libgobject-2.0.so.0.5600.2
+7f937b9cf000-7f937ba19000 r-xp 00000000 fd:01 15598409                   /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14
+7f937ba19000-7f937bc18000 ---p 0004a000 fd:01 15598409                   /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14
+7f937bc18000-7f937bc1b000 r--p 00049000 fd:01 15598409                   /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14
+7f937bc1b000-7f937bc1c000 rw-p 0004c000 fd:01 15598409                   /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14
+7f937bc1c000-7f937bdf7000 r-xp 00000000 fd:01 23080465                   /home/baecker/anaconda3/envs/beaker/lib/libgio-2.0.so.0.5600.2
+7f937bdf7000-7f937bff7000 ---p 001db000 fd:01 23080465                   /home/baecker/anaconda3/envs/beaker/lib/libgio-2.0.so.0.5600.2
+7f937bff7000-7f937bffe000 rw-p 001db000 fd:01 23080465                   /home/baecker/anaconda3/envs/beaker/lib/libgio-2.0.so.0.5600.2
+7f937bffe000-7f937c000000 rw-p 00000000 00:00 0 
+7f937c000000-7f937c021000 rw-p 00000000 00:00 0 
+7f937c021000-7f9380000000 ---p 00000000 00:00 0 
+7f9380030000-7f93800b0000 rw-s 00000000 00:05 12812332                   /SYSV00000000 (deleted)
+7f93800b0000-7f9380110000 rw-s 00000000 00:05 12779560                   /SYSV00000000 (deleted)
+7f9380110000-7f9380164000 r--p 00000000 fd:01 16647723                   /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+7f9380164000-7f93801bb000 r--p 00000000 fd:01 17961198                   /usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf
+7f93801bb000-7f93801cf000 r-xp 00000000 fd:01 15598118                   /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14
+7f93801cf000-7f93803cf000 ---p 00014000 fd:01 15598118                   /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14
+7f93803cf000-7f93803d0000 r--p 00014000 fd:01 15598118                   /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14
+7f93803d0000-7f93803d1000 rw-p 00015000 fd:01 15598118                   /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14
+7f93803d1000-7f93803f3000 r-xp 00000000 fd:01 15598099                   /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3611.0
+7f93803f3000-7f93805f3000 ---p 00022000 fd:01 15598099                   /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3611.0
+7f93805f3000-7f93805f4000 r--p 00022000 fd:01 15598099                   /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3611.0
+7f93805f4000-7f93805f5000 rw-p 00023000 fd:01 15598099                   /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3611.0
+7f93805f5000-7f938070d000 r-xp 00000000 fd:01 15598026                   /usr/lib/x86_64-linux-gnu/libcairo.so.2.11510.0
+7f938070d000-7f938090c000 ---p 00118000 fd:01 15598026                   /usr/lib/x86_64-linux-gnu/libcairo.so.2.11510.0
+7f938090c000-7f938090f000 r--p 00117000 fd:01 15598026                   /usr/lib/x86_64-linux-gnu/libcairo.so.2.11510.0
+7f938090f000-7f9380911000 rw-p 0011a000 fd:01 15598026                   /usr/lib/x86_64-linux-gnu/libcairo.so.2.11510.0
+7f9380911000-7f9380912000 rw-p 00000000 00:00 0 
+7f9380912000-7f9380934000 r-xp 00000000 fd:01 15598978                   /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22810.1
+7f9380934000-7f9380b34000 ---p 00022000 fd:01 15598978                   /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22810.1
+7f9380b34000-7f9380b37000 r--p 00022000 fd:01 15598978                   /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22810.1
+7f9380b37000-7f9380b38000 rw-p 00025000 fd:01 15598978                   /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22810.1
+7f9380b38000-7f9380b44000 r-xp 00000000 fd:01 15597879                   /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14
+7f9380b44000-7f9380d43000 ---p 0000c000 fd:01 15597879                   /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14
+7f9380d43000-7f9380d44000 r--p 0000b000 fd:01 15597879                   /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14
+7f9380d44000-7f9380d45000 rw-p 0000c000 fd:01 15597879                   /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14
+7f9380d45000-7f9380d48000 r-xp 00000000 fd:01 21648328                   /home/baecker/anaconda3/envs/beaker/lib/libgmodule-2.0.so.0.5600.2
+7f9380d48000-7f9380f47000 ---p 00003000 fd:01 21648328                   /home/baecker/anaconda3/envs/beaker/lib/libgmodule-2.0.so.0.5600.2
+7f9380f47000-7f9380f48000 rw-p 00002000 fd:01 21648328                   /home/baecker/anaconda3/envs/beaker/lib/libgmodule-2.0.so.0.5600.2
+7f9380f48000-7f9380ff8000 r-xp 00000000 fd:01 15605854                   /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.32
+7f9380ff8000-7f93811f7000 ---p 000b0000 fd:01 15605854                   /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.32
+7f93811f7000-7f93811fb000 r--p 000af000 fd:01 15605854                   /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.32
+7f93811fb000-7f93811fd000 rw-p 000b3000 fd:01 15605854                   /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.32
+7f93811fd000-7f9381632000 r-xp 00000000 fd:01 15614766                   /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.32
+7f9381632000-7f9381831000 ---p 00435000 fd:01 15614766                   /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.32
+7f9381831000-7f9381838000 r--p 00434000 fd:01 15614766                   /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.32
+7f9381838000-7f938183c000 rw-p 0043b000 fd:01 15614766                   /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.32
+7f938183c000-7f938183f000 rw-p 00000000 00:00 0 
+7f9381940000-7f9381943000 ---p 00000000 00:00 0 
+7f9381943000-7f9381c01000 rw-p 00000000 00:00 0 
+7f9381c01000-7f9381c41000 ---p 00000000 00:00 0 
+7f9381c41000-7f9381c44000 ---p 00000000 00:00 0 
+7f9381c44000-7f9381f42000 rw-p 00000000 00:00 0 
+7f9381f42000-7f9382100000 rw-s 00000000 00:05 12648490                   /SYSV00000000 (deleted)
+7f9382100000-7f9382300000 rw-p 00000000 00:00 0 
+7f9382300000-7f9382500000 rw-p 00000000 00:00 0 
+7f9382500000-7f9383e00000 r--p 00000000 fd:01 25572001                   /home/baecker/anaconda3/envs/beaker/lib/libicudata.so.58.2
+7f9383e00000-7f9383fff000 ---p 01900000 fd:01 25572001                   /home/baecker/anaconda3/envs/beaker/lib/libicudata.so.58.2
+7f9383fff000-7f9384000000 rw-p 018ff000 fd:01 25572001                   /home/baecker/anaconda3/envs/beaker/lib/libicudata.so.58.2
+7f9384000000-7f9384021000 rw-p 00000000 00:00 0 
+7f9384021000-7f9388000000 ---p 00000000 00:00 0 
+7f938801a000-7f938801b000 r--p 00000000 fd:01 17311874                   /usr/share/locale-langpack/en_GB/LC_MESSAGES/atk10.mo
+7f938801b000-7f938801c000 r--p 00000000 fd:01 17311897                   /usr/share/locale-langpack/en_GB/LC_MESSAGES/gdk-pixbuf.mo
+7f938801c000-7f938803e000 r--s 00000000 fd:01 15990869                   /usr/share/mime/mime.cache
+7f938803e000-7f9388044000 r--p 00000000 fd:01 17042842                   /usr/share/icons/hicolor/icon-theme.cache
+7f9388044000-7f938804d000 r--p 00000000 fd:01 17039646                   /usr/share/icons/Adwaita/icon-theme.cache
+7f938804d000-7f938809d000 r--p 00000000 fd:01 17039678                   /usr/share/icons/Humanity/icon-theme.cache
+7f938809d000-7f93880a4000 r--p 00000000 fd:01 17039690                   /usr/share/icons/Humanity-Dark/icon-theme.cache
+7f93880a4000-7f93880b2000 r--p 00000000 fd:01 17039694                   /usr/share/icons/ubuntu-mono-dark/icon-theme.cache
+7f93880b2000-7f93880b4000 r--p 00000000 fd:01 17311902                   /usr/share/locale-langpack/en_GB/LC_MESSAGES/glib20.mo
+7f93880b4000-7f93880d2000 r--p 00000000 fd:01 23867955                   /home/baecker/anaconda3/envs/beaker/share/locale/en_GB/LC_MESSAGES/glib20.mo
+7f93880d2000-7f93880d9000 r--s 00000000 fd:01 15866097                   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f93880d9000-7f93880dd000 r--p 00000000 fd:01 17313521                   /usr/share/locale-langpack/en_GB/LC_MESSAGES/gtk20-properties.mo
+7f93880dd000-7f93880df000 r--p 00000000 fd:01 17313522                   /usr/share/locale-langpack/en_GB/LC_MESSAGES/gtk20.mo
+7f93880df000-7f93882df000 rw-p 00000000 00:00 0 
+7f93882df000-7f93884df000 rw-p 00000000 00:00 0 
+7f93884df000-7f938852a000 r-xp 00000000 fd:01 27791268                   /tmp/nativelib-loader_4904796946256032164/libturbojpeg.so
+7f938852a000-7f938872a000 ---p 0004b000 fd:01 27791268                   /tmp/nativelib-loader_4904796946256032164/libturbojpeg.so
+7f938872a000-7f938872b000 r--p 0004b000 fd:01 27791268                   /tmp/nativelib-loader_4904796946256032164/libturbojpeg.so
+7f938872b000-7f938872c000 rw-p 0004c000 fd:01 27791268                   /tmp/nativelib-loader_4904796946256032164/libturbojpeg.so
+7f938872c000-7f938893c000 rw-p 00000000 00:00 0 
+7f938893c000-7f9388957000 r--s 001d6000 fd:01 24790165                   /home/baecker/anaconda3/envs/beaker/jre/lib/ext/nashorn.jar
+7f9388957000-7f9388b57000 rw-p 00000000 00:00 0 
+7f9388b57000-7f9388b5b000 r--s 00000000 fd:01 26478508                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/6aa41aa22e18b8fa06a12da28ea9c28b-le64.cache-7
+7f9388b5b000-7f9388b67000 r--s 00000000 fd:01 26478507                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le64.cache-7
+7f9388b67000-7f9388b6d000 r--s 00000000 fd:01 26478506                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/2300eef321c393bfd76478a5c0e95b23-le64.cache-7
+7f9388b6d000-7f9388b6e000 r--s 00000000 fd:01 26478505                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le64.cache-7
+7f9388b6e000-7f9388b84000 r--s 00000000 fd:01 26478504                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/04aabc0a78ac019cf9454389977116d2-le64.cache-7
+7f9388b84000-7f9388b85000 r--s 00000000 fd:01 26478503                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/1ac9eb803944fde146138c791f5cc56a-le64.cache-7
+7f9388b85000-7f9388b89000 r--s 00000000 fd:01 26478502                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/385c0604a188198f04d133e54aba7fe7-le64.cache-7
+7f9388b89000-7f9388b8a000 r--s 00000000 fd:01 26478501                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/dc05db6664285cc2f12bf69c139ae4c3-le64.cache-7
+7f9388b8a000-7f9388b8c000 r--s 00000000 fd:01 26478500                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/14a5e22175779b556eaa434240950366-le64.cache-7
+7f9388b8c000-7f9388b8d000 r--s 00000000 fd:01 26478499                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/660208299946a285a940457d1287da33-le64.cache-7
+7f9388b8d000-7f9388b8f000 r--s 00000000 fd:01 26478498                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/4f3e3037c9980c83b53a9351efadef62-le64.cache-7
+7f9388b8f000-7f9388b91000 r--s 00000000 fd:01 26478497                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-7
+7f9388b91000-7f9388b92000 r--s 00000000 fd:01 17054433                   /home/baecker/.cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le64.cache-7
+7f9388b92000-7f9388b94000 r--s 00000000 fd:01 26478496                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/0bd3dc0958fa2205aaaa8ebb13e2872b-le64.cache-7
+7f9388b94000-7f9388b9b000 r--s 00000000 fd:01 26478495                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/8801497958630a81b71ace7c5f9b32a8-le64.cache-7
+7f9388b9b000-7f9388ba0000 r--s 00000000 fd:01 26478494                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/def309198bfa603429122923fa2bb2d4-le64.cache-7
+7f9388ba0000-7f9388ba1000 r--s 00000000 fd:01 26478493                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/b872e6e592da6075ffa4ab0a1fcc0c75-le64.cache-7
+7f9388ba1000-7f9388ba2000 r--s 00000000 fd:01 26478492                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/f6d4eedfaab2589bde49f7a3ff831d22-le64.cache-7
+7f9388ba2000-7f9388ba3000 r--s 00000000 fd:01 26478491                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/589f83ef4c36d296ce6e1c846f468f08-le64.cache-7
+7f9388ba3000-7f9388ba4000 r--s 00000000 fd:01 26478490                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/bab58bb527bb656aaa9f116d68a48d89-le64.cache-7
+7f9388ba4000-7f9388ba5000 r--s 00000000 fd:01 26478489                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/2171a34dccabdb6bcbbc728186263178-le64.cache-7
+7f9388ba5000-7f9388ba6000 r--s 00000000 fd:01 26478488                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/c5c45a61289222e0d30b1a26ef4effbe-le64.cache-7
+7f9388ba6000-7f9388ba7000 r--s 00000000 fd:01 26478487                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/aec30016f93e1b46d1a973dce0d74068-le64.cache-7
+7f9388ba7000-7f9388ba8000 r--s 00000000 fd:01 26478486                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/3f589640d34b7dc9042c8d453f7c8b9c-le64.cache-7
+7f9388ba8000-7f9388ba9000 r--s 00000000 fd:01 26478485                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/16c2fda60d1b4b719f4b3d06fd951d25-le64.cache-7
+7f9388ba9000-7f9388baa000 r--s 00000000 fd:01 26478484                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/a48eab177a16e4f3713381162db2f3e9-le64.cache-7
+7f9388baa000-7f9388bab000 r--s 00000000 fd:01 26478483                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/564b2e68ac9bc4e36a6f7f6d6125ec1c-le64.cache-7
+7f9388bab000-7f9388bb0000 r--s 00000000 fd:01 17053296                   /home/baecker/.cache/fontconfig/9d2451b1fd30e5bffe8383fd27c35478-le64.cache-7
+7f9388bb0000-7f9388bb6000 r--s 00000000 fd:01 17053162                   /home/baecker/.cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-7
+7f9388bb6000-7f9388bbe000 r--s 00000000 fd:01 26478482                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/bf3b770c553c462765856025a94f1ce6-le64.cache-7
+7f9388bbe000-7f9388bbf000 r--s 00000000 fd:01 26478481                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/56cf4f4769d0f4abc89a4895d7bd3ae1-le64.cache-7
+7f9388bbf000-7f9388bc0000 r--s 00000000 fd:01 26478480                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/b9d506c9ac06c20b433354fa67a72993-le64.cache-7
+7f9388bc0000-7f9388bc6000 r--s 00000000 fd:01 26478479                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/b47c4e1ecd0709278f4910c18777a504-le64.cache-7
+7f9388bc6000-7f9388bd9000 r--s 00000000 fd:01 26478478                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-7
+7f9388bd9000-7f9388bda000 r--s 00000000 fd:01 26478477                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/370e5b74bf5dafc30834de68e24a87a4-le64.cache-7
+7f9388bda000-7f9388bdb000 r--s 00000000 fd:01 17044640                   /home/baecker/.cache/fontconfig/6b2c5944714ca7831b25bed9e85cb5c8-le64.cache-7
+7f9388bdb000-7f9388bdc000 r--s 00000000 fd:01 26478476                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/d5178ab6d91b49bf20a416737dcea9e8-le64.cache-7
+7f9388bdc000-7f9388bdd000 r--s 00000000 fd:01 17039838                   /home/baecker/.cache/fontconfig/551ecf3b0e8b0bca0f25c0944f561853-le64.cache-7
+7f9388bdd000-7f9388be0000 r--s 00000000 fd:01 17039837                   /home/baecker/.cache/fontconfig/f259c2cffa685e28062317905db73c4a-le64.cache-7
+7f9388be0000-7f9388be2000 r--s 00000000 fd:01 17044630                   /home/baecker/.cache/fontconfig/550f3886151c940c12a5ed35f6a00586-le64.cache-7
+7f9388be2000-7f9388be5000 r--s 00000000 fd:01 17044542                   /home/baecker/.cache/fontconfig/674d1711f2d1d2a09646eb0bdcadee49-le64.cache-7
+7f9388be5000-7f9388be6000 r--s 00000000 fd:01 26478475                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le64.cache-7
+7f9388be6000-7f9388bf2000 r--s 00000000 fd:01 17068301                   /home/baecker/.cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-7
+7f9388bf2000-7f9388bf3000 r--s 00000000 fd:01 26478474                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/30829fa25452a46451e813d634d7f916-le64.cache-7
+7f9388bf3000-7f9388bf4000 r--s 00000000 fd:01 26478473                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/0c9eb80ebd1c36541ebe2852d3bb0c49-le64.cache-7
+7f9388bf4000-7f9388c18000 r--s 00000000 fd:01 26478457                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/cabbd14511b9e8a55e92af97fb3a0461-le64.cache-7
+7f9388c18000-7f9388d42000 r-xp 00000000 fd:01 17695013                   /home/baecker/anaconda3/envs/beaker/lib/libstdc++.so.6.0.24
+7f9388d42000-7f9388f41000 ---p 0012a000 fd:01 17695013                   /home/baecker/anaconda3/envs/beaker/lib/libstdc++.so.6.0.24
+7f9388f41000-7f9388f4b000 r--p 00129000 fd:01 17695013                   /home/baecker/anaconda3/envs/beaker/lib/libstdc++.so.6.0.24
+7f9388f4b000-7f9388f4f000 rw-p 00133000 fd:01 17695013                   /home/baecker/anaconda3/envs/beaker/lib/libstdc++.so.6.0.24
+7f9388f4f000-7f9388f52000 rw-p 00000000 00:00 0 
+7f9388f52000-7f9389040000 r-xp 00000000 fd:01 23079731                   /home/baecker/anaconda3/envs/beaker/lib/libiconv.so.2.6.0
+7f9389040000-7f938923f000 ---p 000ee000 fd:01 23079731                   /home/baecker/anaconda3/envs/beaker/lib/libiconv.so.2.6.0
+7f938923f000-7f9389241000 rw-p 000ed000 fd:01 23079731                   /home/baecker/anaconda3/envs/beaker/lib/libiconv.so.2.6.0
+7f9389241000-7f9389274000 r-xp 00000000 fd:01 23226914                   /home/baecker/anaconda3/envs/beaker/lib/liblzma.so.5.2.4
+7f9389274000-7f9389473000 ---p 00033000 fd:01 23226914                   /home/baecker/anaconda3/envs/beaker/lib/liblzma.so.5.2.4
+7f9389473000-7f9389474000 rw-p 00032000 fd:01 23226914                   /home/baecker/anaconda3/envs/beaker/lib/liblzma.so.5.2.4
+7f9389474000-7f938965f000 r-xp 00000000 fd:01 25571990                   /home/baecker/anaconda3/envs/beaker/lib/libicuuc.so.58.2
+7f938965f000-7f938985e000 ---p 001eb000 fd:01 25571990                   /home/baecker/anaconda3/envs/beaker/lib/libicuuc.so.58.2
+7f938985e000-7f9389871000 rw-p 001ea000 fd:01 25571990                   /home/baecker/anaconda3/envs/beaker/lib/libicuuc.so.58.2
+7f9389871000-7f9389873000 rw-p 00000000 00:00 0 
+7f9389873000-7f9389b63000 r-xp 00000000 fd:01 25571995                   /home/baecker/anaconda3/envs/beaker/lib/libicui18n.so.58.2
+7f9389b63000-7f9389d62000 ---p 002f0000 fd:01 25571995                   /home/baecker/anaconda3/envs/beaker/lib/libicui18n.so.58.2
+7f9389d62000-7f9389d73000 rw-p 002ef000 fd:01 25571995                   /home/baecker/anaconda3/envs/beaker/lib/libicui18n.so.58.2
+7f9389d73000-7f9389d7a000 r-xp 00000000 fd:01 21242298                   /home/baecker/anaconda3/envs/beaker/lib/libuuid.so.1.3.0
+7f9389d7a000-7f9389f79000 ---p 00007000 fd:01 21242298                   /home/baecker/anaconda3/envs/beaker/lib/libuuid.so.1.3.0
+7f9389f79000-7f9389f7a000 rw-p 00006000 fd:01 21242298                   /home/baecker/anaconda3/envs/beaker/lib/libuuid.so.1.3.0
+7f9389f7a000-7f938a134000 r-xp 00000000 fd:01 22952130                   /home/baecker/anaconda3/envs/beaker/lib/libxml2.so.2.9.8
+7f938a134000-7f938a334000 ---p 001ba000 fd:01 22952130                   /home/baecker/anaconda3/envs/beaker/lib/libxml2.so.2.9.8
+7f938a334000-7f938a33e000 rw-p 001ba000 fd:01 22952130                   /home/baecker/anaconda3/envs/beaker/lib/libxml2.so.2.9.8
+7f938a33e000-7f938a33f000 rw-p 00000000 00:00 0 
+7f938a33f000-7f938a38c000 r-xp 00000000 fd:01 23080542                   /home/baecker/anaconda3/envs/beaker/lib/libfontconfig.so.1.12.0
+7f938a38c000-7f938a58c000 ---p 0004d000 fd:01 23080542                   /home/baecker/anaconda3/envs/beaker/lib/libfontconfig.so.1.12.0
+7f938a58c000-7f938a58e000 rw-p 0004d000 fd:01 23080542                   /home/baecker/anaconda3/envs/beaker/lib/libfontconfig.so.1.12.0
+7f938a58e000-7f938a78e000 rw-p 00000000 00:00 0 
+7f938a78e000-7f938a791000 ---p 00000000 00:00 0 
+7f938a791000-7f938a88f000 rw-p 00000000 00:00 0 
+7f938a88f000-7f938aa8f000 rw-p 00000000 00:00 0 
+7f938aa8f000-7f938ac8f000 rw-p 00000000 00:00 0 
+7f938ac8f000-7f938ae8f000 rw-p 00000000 00:00 0 
+7f938ae8f000-7f938b08f000 rw-p 00000000 00:00 0 
+7f938b08f000-7f938b28f000 rw-p 00000000 00:00 0 
+7f938b28f000-7f938b292000 ---p 00000000 00:00 0 
+7f938b292000-7f938b590000 rw-p 00000000 00:00 0 
+7f938b590000-7f938b593000 ---p 00000000 00:00 0 
+7f938b593000-7f938b691000 rw-p 00000000 00:00 0 
+7f938b691000-7f938b694000 ---p 00000000 00:00 0 
+7f938b694000-7f938b792000 rw-p 00000000 00:00 0 
+7f938b792000-7f938b797000 r-xp 00000000 fd:01 15605479                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f938b797000-7f938b996000 ---p 00005000 fd:01 15605479                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f938b996000-7f938b997000 r--p 00004000 fd:01 15605479                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f938b997000-7f938b998000 rw-p 00005000 fd:01 15605479                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f938b998000-7f938b9a1000 r-xp 00000000 fd:01 15599783                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f938b9a1000-7f938bba0000 ---p 00009000 fd:01 15599783                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f938bba0000-7f938bba1000 r--p 00008000 fd:01 15599783                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f938bba1000-7f938bba2000 rw-p 00009000 fd:01 15599783                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f938bba2000-7f938bbe3000 r-xp 00000000 fd:01 17576512                   /home/baecker/anaconda3/envs/beaker/lib/libpng16.so.16.35.0
+7f938bbe3000-7f938bde2000 ---p 00041000 fd:01 17576512                   /home/baecker/anaconda3/envs/beaker/lib/libpng16.so.16.35.0
+7f938bde2000-7f938bde3000 rw-p 00040000 fd:01 17576512                   /home/baecker/anaconda3/envs/beaker/lib/libpng16.so.16.35.0
+7f938bde3000-7f938bdff000 r-xp 00000000 fd:01 23364166                   /home/baecker/anaconda3/envs/beaker/lib/libz.so.1.2.11
+7f938bdff000-7f938bfff000 ---p 0001c000 fd:01 23364166                   /home/baecker/anaconda3/envs/beaker/lib/libz.so.1.2.11
+7f938bfff000-7f938c000000 rw-p 0001c000 fd:01 23364166                   /home/baecker/anaconda3/envs/beaker/lib/libz.so.1.2.11
+7f938c000000-7f938c021000 rw-p 00000000 00:00 0 
+7f938c021000-7f9390000000 ---p 00000000 00:00 0 
+7f9390000000-7f9390001000 r--s 00000000 fd:01 26478472                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/22368d551a680bfe5a62c02760edf4ea-le64.cache-7
+7f9390001000-7f9390002000 r--s 00000000 fd:01 26478471                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/4d9c95eba1cb85bbcf2878543262124a-le64.cache-7
+7f9390002000-7f9390011000 r--s 00000000 fd:01 26478466                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/9b89f8e3dae116d678bbf48e5f21f69b-le64.cache-7
+7f9390011000-7f939001b000 r--s 00000000 fd:01 26478465                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/d0972c3d32f097851eb916381fc38920-le64.cache-7
+7f939001b000-7f939003f000 r--s 00000000 fd:01 26478455                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-7
+7f939003f000-7f9390042000 ---p 00000000 00:00 0 
+7f9390042000-7f9390140000 rw-p 00000000 00:00 0 
+7f9390140000-7f9390219000 r-xp 00000000 fd:01 10884577                   /home/baecker/anaconda3/envs/beaker/lib/libfreetype.so.6.16.1
+7f9390219000-7f9390418000 ---p 000d9000 fd:01 10884577                   /home/baecker/anaconda3/envs/beaker/lib/libfreetype.so.6.16.1
+7f9390418000-7f939041f000 rw-p 000d8000 fd:01 10884577                   /home/baecker/anaconda3/envs/beaker/lib/libfreetype.so.6.16.1
+7f939041f000-7f93904fb000 r-xp 00000000 fd:01 24914301                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libfontmanager.so
+7f93904fb000-7f93906fa000 ---p 000dc000 fd:01 24914301                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libfontmanager.so
+7f93906fa000-7f9390700000 rw-p 000db000 fd:01 24914301                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libfontmanager.so
+7f9390700000-7f9390712000 rw-p 00000000 00:00 0 
+7f9390712000-7f9390714000 rw-p 00106000 fd:01 24914301                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libfontmanager.so
+7f9390714000-7f939071a000 r-xp 00000000 fd:01 11017184                   /home/baecker/anaconda3/envs/beaker/lib/libXdmcp.so.6.0.0
+7f939071a000-7f9390919000 ---p 00006000 fd:01 11017184                   /home/baecker/anaconda3/envs/beaker/lib/libXdmcp.so.6.0.0
+7f9390919000-7f939091a000 rw-p 00005000 fd:01 11017184                   /home/baecker/anaconda3/envs/beaker/lib/libXdmcp.so.6.0.0
+7f939091a000-7f939091d000 r-xp 00000000 fd:01 21367083                   /home/baecker/anaconda3/envs/beaker/lib/libXau.so.6.0.0
+7f939091d000-7f9390b1c000 ---p 00003000 fd:01 21367083                   /home/baecker/anaconda3/envs/beaker/lib/libXau.so.6.0.0
+7f9390b1c000-7f9390b1d000 rw-p 00002000 fd:01 21367083                   /home/baecker/anaconda3/envs/beaker/lib/libXau.so.6.0.0
+7f9390b1d000-7f9390b4d000 r-xp 00000000 fd:01 11147460                   /home/baecker/anaconda3/envs/beaker/lib/libxcb.so.1.1.0
+7f9390b4d000-7f9390d4c000 ---p 00030000 fd:01 11147460                   /home/baecker/anaconda3/envs/beaker/lib/libxcb.so.1.1.0
+7f9390d4c000-7f9390d4d000 rw-p 0002f000 fd:01 11147460                   /home/baecker/anaconda3/envs/beaker/lib/libxcb.so.1.1.0
+7f9390d4d000-7f9390d5c000 r-xp 00000000 fd:01 15605487                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9390d5c000-7f9390f5b000 ---p 0000f000 fd:01 15605487                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9390f5b000-7f9390f5c000 r--p 0000e000 fd:01 15605487                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9390f5c000-7f9390f5d000 rw-p 0000f000 fd:01 15605487                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9390f5d000-7f9390f62000 r-xp 00000000 fd:01 15605505                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f9390f62000-7f9391161000 ---p 00005000 fd:01 15605505                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f9391161000-7f9391162000 r--p 00004000 fd:01 15605505                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f9391162000-7f9391163000 rw-p 00005000 fd:01 15605505                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f9391163000-7f939116c000 r-xp 00000000 fd:01 15605499                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f939116c000-7f939136b000 ---p 00009000 fd:01 15605499                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f939136b000-7f939136c000 r--p 00008000 fd:01 15605499                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f939136c000-7f939136d000 rw-p 00009000 fd:01 15605499                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f939136d000-7f93914a0000 r-xp 00000000 fd:01 15604644                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f93914a0000-7f93916a0000 ---p 00133000 fd:01 15604644                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f93916a0000-7f93916a1000 r--p 00133000 fd:01 15604644                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f93916a1000-7f93916a5000 rw-p 00134000 fd:01 15604644                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f93916a5000-7f93916b6000 r-xp 00000000 fd:01 15605477                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f93916b6000-7f93918b5000 ---p 00011000 fd:01 15605477                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f93918b5000-7f93918b6000 r--p 00010000 fd:01 15605477                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f93918b6000-7f93918b7000 rw-p 00011000 fd:01 15605477                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f93918b7000-7f939190e000 r-xp 00000000 fd:01 24914295                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt_xawt.so
+7f939190e000-7f9391b0d000 ---p 00057000 fd:01 24914295                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt_xawt.so
+7f9391b0d000-7f9391b11000 rw-p 00056000 fd:01 24914295                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt_xawt.so
+7f9391b11000-7f9391b12000 rw-p 00000000 00:00 0 
+7f9391b12000-7f9391b18000 rw-p 0006e000 fd:01 24914295                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt_xawt.so
+7f9391b18000-7f9391bbb000 r-xp 00000000 fd:01 24914297                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt.so
+7f9391bbb000-7f9391dbb000 ---p 000a3000 fd:01 24914297                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt.so
+7f9391dbb000-7f9391dc7000 rw-p 000a3000 fd:01 24914297                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt.so
+7f9391dc7000-7f9391deb000 rw-p 00000000 00:00 0 
+7f9391deb000-7f9391df2000 rw-p 000bd000 fd:01 24914297                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libawt.so
+7f9391df2000-7f9391ff2000 rw-p 00000000 00:00 0 
+7f9391ff2000-7f93921e8000 rw-p 00000000 00:00 0 
+7f93921e8000-7f93921f2000 ---p 00000000 00:00 0 
+7f93921f2000-7f9392204000 r--s 00345000 fd:01 24652027                   /home/baecker/anaconda3/envs/beaker/jre/lib/resources.jar
+7f9392204000-7f9392404000 rw-p 00000000 00:00 0 
+7f9392404000-7f9392405000 r--s 00000000 fd:01 26478470                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/85e0a52ce643a7ba2ae53e5d6949cead-le64.cache-7
+7f9392405000-7f9392406000 r--s 00000000 fd:01 26478469                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/49f0de54bdd920fe4f0dfd4cbac43e6b-le64.cache-7
+7f9392406000-7f9392407000 r--s 00000000 fd:01 26478468                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/f6e6e0a5c3d2f6ae0c0c2e0ecd42a997-le64.cache-7
+7f9392407000-7f9392408000 r--s 00000000 fd:01 26478467                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/4b2eda6bb976bda485cb2176619421d5-le64.cache-7
+7f9392408000-7f939240a000 r--s 00000000 fd:01 26478464                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/6afa1bb216ce958c1589e297e8008489-le64.cache-7
+7f939240a000-7f939240e000 r--s 00000000 fd:01 26478453                   /home/baecker/anaconda3/envs/beaker/var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-7
+7f939240e000-7f9392411000 ---p 00000000 00:00 0 
+7f9392411000-7f939250f000 rw-p 00000000 00:00 0 
+7f939250f000-7f939252b000 r--s 00393000 fd:01 24790168                   /home/baecker/anaconda3/envs/beaker/jre/lib/ext/cldrdata.jar
+7f939252b000-7f9392535000 r--s 00116000 fd:01 24790163                   /home/baecker/anaconda3/envs/beaker/jre/lib/ext/localedata.jar
+7f9392535000-7f9392536000 r--p 00000000 fd:01 17305813                   /usr/share/locale-langpack/en_GB/LC_MESSAGES/libc.mo
+7f9392536000-7f939253b000 r--s 002f9000 fd:01 24652026                   /home/baecker/anaconda3/envs/beaker/jre/lib/charsets.jar
+7f939253b000-7f939273b000 rw-p 00000000 00:00 0 
+7f939273b000-7f939293b000 rw-p 00000000 00:00 0 
+7f939293b000-7f939293c000 r--s 0007a000 fd:03 34999317                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/jxrlib-all-0.2.1.jar
+7f939293c000-7f9392949000 r--s 000dc000 fd:03 33687245                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/ome-poi-5.3.3.jar
+7f9392949000-7f939294a000 r--s 00003000 fd:03 33687244                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/metakit-5.3.2.jar
+7f939294a000-7f939294d000 r--s 00014000 fd:03 33687249                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/ome-mdbtools-5.3.2.jar
+7f939294d000-7f9392955000 r--s 0013d000 fd:03 33687243                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/formats-gpl-5.9.2.jar
+7f9392955000-7f9392965000 r--s 000ed000 fd:03 34999316                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/jai_imageio-5.1.10.jar
+7f9392965000-7f9392967000 r--s 0013b000 fd:03 33687247                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/turbojpeg-5.9.2.jar
+7f9392967000-7f9392977000 r--s 000f1000 fd:03 34999321                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/ome-jai-0.1.0.jar
+7f9392977000-7f9392979000 r--s 00015000 fd:03 33687250                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/ome-codecs-0.2.2.jar
+7f9392979000-7f939297b000 r--s 0001c000 fd:03 33687241                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/formats-api-5.9.2.jar
+7f939297b000-7f9392980000 r--s 0009b000 fd:03 33687246                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/specification-5.6.3.jar
+7f9392980000-7f9392985000 r--s 0009b000 fd:03 34999324                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/ome-xml-5.6.3.jar
+7f9392985000-7f939298a000 r--s 0009e000 fd:03 33687242                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/formats-bsd-5.9.2.jar
+7f939298a000-7f939298c000 r--s 0001d000 fd:03 33687248                   /media/baecker/DONNEES/programs/Fiji.app/jars/bio-formats/ome-common-5.3.6.jar
+7f939298c000-7f939298e000 r--s 00006000 fd:03 34999508                   /media/baecker/DONNEES/programs/Fiji.app/jars/scifio-hdf5-0.1.3.jar
+7f939298e000-7f9392997000 r--s 0021f000 fd:03 31197404                   /media/baecker/DONNEES/programs/Fiji.app/jars/ij-1.52h.jar
+7f9392997000-7f93929a6000 r--s 00111000 fd:03 31065953                   /media/baecker/DONNEES/programs/Fiji.app/jars/JTransforms-3.1.jar
+7f93929a6000-7f93929a9000 r--s 00014000 fd:03 31336178                   /media/baecker/DONNEES/programs/Fiji.app/jars/VectorGraphics2D-0.11.jar
+7f93929a9000-7f93929ab000 r--s 00005000 fd:03 31336185                   /media/baecker/DONNEES/programs/Fiji.app/jars/org.abego.treelayout.core-1.0.1.jar
+7f93929ab000-7f93929ae000 r--s 00012000 fd:03 31336177                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-jupyter-kernel-0.5.0.jar
+7f93929ae000-7f93929b1000 r--s 0001d000 fd:03 34999363                   /media/baecker/DONNEES/programs/Fiji.app/jars/groovy-json-2.4.8.jar
+7f93929b1000-7f93929b4000 r--s 00043000 fd:03 30935068                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagescience.jar
+7f93929b4000-7f93929cb000 r--s 00115000 fd:03 31336240                   /media/baecker/DONNEES/programs/Fiji.app/jars/assertj-core-3.8.0.jar
+7f93929cb000-7f93929cc000 r--s 00001000 fd:03 31336223                   /media/baecker/DONNEES/programs/Fiji.app/jars/javax.inject-2.5.0-b05.jar
+7f93929cc000-7f93929d0000 r--s 0001a000 fd:03 31336219                   /media/baecker/DONNEES/programs/Fiji.app/jars/hk2-utils-2.5.0-b05.jar
+7f93929d0000-7f93929d5000 r--s 00027000 fd:03 31336235                   /media/baecker/DONNEES/programs/Fiji.app/jars/hk2-api-2.5.0-b05.jar
+7f93929d5000-7f93929ed000 r--s 000d6000 fd:03 31336224                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-guava-2.23.2.jar
+7f93929ed000-7f93929ef000 r--s 00005000 fd:03 31336222                   /media/baecker/DONNEES/programs/Fiji.app/jars/javax.annotation-api-1.2.jar
+7f93929ef000-7f93929f3000 r--s 00019000 fd:03 31336253                   /media/baecker/DONNEES/programs/Fiji.app/jars/javax.ws.rs-api-2.0.1.jar
+7f93929f3000-7f9392a02000 r--s 000a0000 fd:03 31336247                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-common-2.23.2.jar
+7f9392a02000-7f9392a05000 r--s 0000e000 fd:03 31336190                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-media-multipart-2.23.2.jar
+7f9392a05000-7f9392a07000 r--s 00002000 fd:03 31336207                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-setuid-java-1.0.3.jar
+7f9392a07000-7f9392a0a000 r--s 00014000 fd:03 31336204                   /media/baecker/DONNEES/programs/Fiji.app/jars/argparse4j-0.7.0.jar
+7f9392a0a000-7f9392a0c000 r--s 00003000 fd:03 31336232                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-request-logging-1.2.0.jar
+7f9392a0c000-7f9392a0f000 r--s 00025000 fd:03 31336227                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-http-9.4.4.v20170414.jar
+7f9392a0f000-7f9392a12000 r--s 00014000 fd:03 31336261                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-security-9.4.4.v20170414.jar
+7f9392a12000-7f9392a14000 r--s 00008000 fd:03 31336215                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-jetty-1.2.0.jar
+7f9392a14000-7f9392a16000 r--s 00003000 fd:03 31336194                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-continuation-9.4.4.v20170414.jar
+7f9392a16000-7f9392a18000 r--s 0000b000 fd:03 31336228                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-xml-9.4.4.v20170414.jar
+7f9392a18000-7f9392a20000 r--s 00086000 fd:03 31336192                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-server-9.4.4.v20170414.jar
+7f9392a20000-7f9392a21000 r--s 00003000 fd:03 31336238                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-jaxrs-json-provider-2.9.1.jar
+7f9392a21000-7f9392a23000 r--s 00003000 fd:03 31336262                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-metrics-1.2.0.jar
+7f9392a23000-7f9392a25000 r--s 00004000 fd:03 31336241                   /media/baecker/DONNEES/programs/Fiji.app/jars/log4j-over-slf4j-1.7.25.jar
+7f9392a25000-7f9392a27000 r--s 00008000 fd:03 31336198                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-logging-1.2.0.jar
+7f9392a27000-7f9392a28000 r--s 00009000 fd:03 31336255                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-dataformat-yaml-2.9.1.jar
+7f9392a28000-7f9392a3a000 r--s 000a9000 fd:03 31336216                   /media/baecker/DONNEES/programs/Fiji.app/jars/hibernate-validator-5.4.1.Final.jar
+7f9392a3a000-7f9392a3c000 r--s 00011000 fd:03 31336213                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-datatype-guava-2.9.1.jar
+7f9392a3c000-7f9392a40000 r--s 0004b000 fd:03 31336251                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-core-2.9.1.jar
+7f9392a40000-7f9392a42000 r--s 00003000 fd:03 31336196                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-jackson-1.2.0.jar
+7f9392a42000-7f9392a44000 r--s 0000c000 fd:03 31336233                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-server-0.1.0.jar
+7f9392a44000-7f9392a45000 r--s 00005000 fd:03 31336184                   /media/baecker/DONNEES/programs/Fiji.app/jars/json-simple-1.1.1.jar
+7f9392a45000-7f9392a46000 r--s 00001000 fd:03 31336193                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-metainf-services-2.25.1.jar
+7f9392a46000-7f9392a55000 r--s 0009f000 fd:03 31336170                   /media/baecker/DONNEES/programs/Fiji.app/jars/guice-3.0.jar
+7f9392a55000-7f9392a56000 r--s 00004000 fd:03 33557271                   /media/baecker/DONNEES/programs/Fiji.app/jars/native-lib-loader-2.3.1.jar
+7f9392a56000-7f9392a58000 r--s 00014000 fd:03 31336229                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-servlets-9.4.4.v20170414.jar
+7f9392a58000-7f9392a5a000 r--s 00004000 fd:03 31336203                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-healthchecks-3.2.5.jar
+7f9392a5a000-7f9392a5c000 r--s 00002000 fd:03 31336200                   /media/baecker/DONNEES/programs/Fiji.app/jars/aopalliance-repackaged-2.5.0-b05.jar
+7f9392a5c000-7f9392a5e000 r--s 00008000 fd:03 31336168                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-jvm-3.2.5.jar
+7f9392a5e000-7f9392a5f000 r--s 00003000 fd:03 31336243                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-test-framework-provider-inmemory-2.25.1.jar
+7f9392a5f000-7f9392a60000 r--s 00003000 fd:03 31336237                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-json-3.2.5.jar
+7f9392a60000-7f9392a61000 r--s 00003000 fd:03 31336179                   /media/baecker/DONNEES/programs/Fiji.app/jars/slf4j-simple-1.7.25.jar
+7f9392a61000-7f9392a63000 r--s 00002000 fd:03 31336318                   /media/baecker/DONNEES/programs/Fiji.app/jars/kotlin-stdlib-jdk8-1.2.50.jar
+7f9392a63000-7f9392a75000 r--s 000c8000 fd:03 30935072                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-common-2.75.0.jar
+7f9392a75000-7f9392a78000 r--s 0009f000 fd:03 31336316                   /media/baecker/DONNEES/programs/Fiji.app/jars/sciview-0.1.6-SNAPSHOT.jar
+7f9392a78000-7f9392a79000 r--s 00005000 fd:03 34999374                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-launcher-4.0.5.jar
+7f9392a79000-7f9392a7b000 r--s 00003000 fd:03 31336218                   /media/baecker/DONNEES/programs/Fiji.app/jars/jcl-over-slf4j-1.7.25.jar
+7f9392a7b000-7f9392a7c000 r--s 00003000 fd:03 31336325                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-mesh-io-0.1.2.jar
+7f9392a7c000-7f9392a7e000 r--s 00006000 fd:03 31336256                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-test-framework-core-2.25.1.jar
+7f9392a7e000-7f9392a84000 r--s 00015000 fd:03 31336327                   /media/baecker/DONNEES/programs/Fiji.app/jars/kotlin-stdlib-common-1.2.50.jar
+7f9392a84000-7f9392a85000 r--s 00004000 fd:03 31336246                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-jetty9-3.2.5.jar
+7f9392a85000-7f9392a87000 r--s 0001c000 fd:03 34999352                   /media/baecker/DONNEES/programs/Fiji.app/jars/fiji-compat-2.0.3.jar
+7f9392a87000-7f9392a89000 r--s 00002000 fd:03 31336195                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-util-1.2.0.jar
+7f9392a89000-7f9392abe000 r--s 00241000 fd:03 31336301                   /media/baecker/DONNEES/programs/Fiji.app/jars/kotlin-reflect-1.2.50.jar
+7f9392abe000-7f9392ac2000 r--s 00017000 fd:03 31336257                   /media/baecker/DONNEES/programs/Fiji.app/jars/logback-access-1.2.3.jar
+7f9392ac2000-7f9392ac4000 r--s 00005000 fd:03 31336201                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-configuration-1.2.0.jar
+7f9392ac4000-7f9392ac6000 r--s 00007000 fd:03 31336202                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-datatype-jdk8-2.9.1.jar
+7f9392ac6000-7f9392ac8000 r--s 0000f000 fd:03 31336206                   /media/baecker/DONNEES/programs/Fiji.app/jars/jboss-logging-3.3.0.Final.jar
+7f9392ac8000-7f9392aca000 r--s 00004000 fd:03 31336295                   /media/baecker/DONNEES/programs/Fiji.app/jars/batch-processor-0.2.0.jar
+7f9392aca000-7f9392ad7000 r--s 00070000 fd:03 31336181                   /media/baecker/DONNEES/programs/Fiji.app/jars/beaker-kernel-base-68a7965.jar
+7f9392ad7000-7f9392ad9000 r--s 0000c000 fd:03 31336164                   /media/baecker/DONNEES/programs/Fiji.app/jars/objenesis-2.6.jar
+7f9392ad9000-7f9392adb000 r--s 0000e000 fd:03 31336211                   /media/baecker/DONNEES/programs/Fiji.app/jars/classmate-1.3.1.jar
+7f9392adb000-7f9392adf000 r--s 0002d000 fd:03 31336155                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-omero-0.6.0.jar
+7f9392adf000-7f9392ae2000 r--s 0002a000 fd:03 31336188                   /media/baecker/DONNEES/programs/Fiji.app/jars/hk2-locator-2.5.0-b05.jar
+7f9392ae2000-7f9392ae4000 r--s 00006000 fd:03 31336245                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-servlets-1.2.0.jar
+7f9392ae4000-7f9392ae6000 r--s 0001c000 fd:03 31336230                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-webapp-9.4.4.v20170414.jar
+7f9392ae6000-7f9392af7000 r--s 001a9000 fd:03 31336269                   /media/baecker/DONNEES/programs/Fiji.app/jars/proto-1.2.0.jar
+7f9392af7000-7f9392af8000 r--s 00006000 fd:03 31336264                   /media/baecker/DONNEES/programs/Fiji.app/jars/libtensorflow-1.2.0.jar
+7f9392af8000-7f9392afa000 r--s 00005000 fd:03 31336263                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-tensorflow-0.2.0.jar
+7f9392afa000-7f9392afb000 r--s 00003000 fd:03 31336266                   /media/baecker/DONNEES/programs/Fiji.app/jars/microscope-image-quality-0.1.1.jar
+7f9392afb000-7f9392afd000 r--s 0000a000 fd:03 31336248                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-core-1.2.0.jar
+7f9392afd000-7f9392b01000 r--s 0000c000 fd:03 31336217                   /media/baecker/DONNEES/programs/Fiji.app/jars/validation-api-1.1.0.Final.jar
+7f9392b01000-7f9392b02000 r--s 00002000 fd:03 31336210                   /media/baecker/DONNEES/programs/Fiji.app/jars/profiler-1.0.2.jar
+7f9392b02000-7f9392b06000 r--s 00017000 fd:03 31336260                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-jersey-1.2.0.jar
+7f9392b06000-7f9392b08000 r--s 00002000 fd:03 31336173                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-itk-0.1.0.jar
+7f9392b08000-7f9392b0a000 r--s 0000f000 fd:03 31336209                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-datatype-joda-2.9.1.jar
+7f9392b0a000-7f9392b14000 r--s 0008a000 fd:03 31336172                   /media/baecker/DONNEES/programs/Fiji.app/jars/simpleitk-0.9.0.jar
+7f9392b14000-7f9392b24000 r--s 000db000 fd:03 31336297                   /media/baecker/DONNEES/programs/Fiji.app/jars/kotlin-stdlib-1.2.50.jar
+7f9392b24000-7f9392b28000 r--s 0002a000 fd:03 30935074                   /media/baecker/DONNEES/programs/Fiji.app/jars/script-editor-0.3.0.jar
+7f9392b28000-7f9392b30000 r--s 00068000 fd:03 35259302                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-legacy-0.33.1.jar
+7f9392b30000-7f9392b32000 r--s 00008000 fd:03 31336191                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-testing-1.2.0.jar
+7f9392b32000-7f9392b35000 r--s 00015000 fd:03 31336212                   /media/baecker/DONNEES/programs/Fiji.app/jars/javax.servlet-api-3.1.0.jar
+7f9392b35000-7f9392b41000 r--s 000b2000 fd:03 31336086                   /media/baecker/DONNEES/programs/Fiji.app/jars/jmockit-1.33.jar
+7f9392b41000-7f9392b43000 r--s 0000e000 fd:03 31336234                   /media/baecker/DONNEES/programs/Fiji.app/jars/mimepull-1.9.6.jar
+7f9392b43000-7f9392b46000 r--s 0001d000 fd:03 31336250                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-io-9.4.4.v20170414.jar
+7f9392b46000-7f9392b47000 r--s 00004000 fd:03 31336259                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-servlets-3.2.5.jar
+7f9392b47000-7f9392b48000 r--s 00007000 fd:03 31336205                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-jaxrs-base-2.9.1.jar
+7f9392b48000-7f9392b4d000 r--s 00060000 fd:03 34999464                   /media/baecker/DONNEES/programs/Fiji.app/jars/mapdb-1.0.3.jar
+7f9392b4d000-7f9392b4f000 r--s 00001000 fd:03 31335952                   /media/baecker/DONNEES/programs/Fiji.app/jars/BIII_website-0.1.1.jar
+7f9392b4f000-7f9392b51000 r--s 00008000 fd:03 31336252                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-bean-validation-2.25.1.jar
+7f9392b51000-7f9392b55000 r--s 00033000 fd:03 31336186                   /media/baecker/DONNEES/programs/Fiji.app/jars/javax.el-3.0.0.jar
+7f9392b55000-7f9392b58000 r--s 00015000 fd:03 31336187                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-datatype-jsr310-2.9.1.jar
+7f9392b58000-7f9392b5c000 r--s 00035000 fd:03 31065952                   /media/baecker/DONNEES/programs/Fiji.app/jars/JLargeArrays-1.5.jar
+7f9392b5c000-7f9392b5e000 r--s 0000c000 fd:03 31336167                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-cli-1.4.jar
+7f9392b5e000-7f9392b60000 r--s 00010000 fd:03 31336221                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-media-jaxb-2.25.1.jar
+7f9392b60000-7f9392b6b000 r--s 000f2000 fd:03 31336279                   /media/baecker/DONNEES/programs/Fiji.app/jars/scifio-0.37.2.jar
+7f9392b6b000-7f9392b6d000 r--s 00000000 fd:03 31336171                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-logback-3.2.5.jar
+7f9392b6d000-7f9392b6f000 r--s 00004000 fd:03 31336208                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-validation-1.2.0.jar
+7f9392b6f000-7f9392b72000 r--s 00021000 fd:03 31336254                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-module-afterburner-2.9.1.jar
+7f9392b72000-7f9392b74000 r--s 00001000 fd:03 31336199                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-module-parameter-names-2.9.1.jar
+7f9392b74000-7f9392b75000 r--s 00000000 fd:03 31336175                   /media/baecker/DONNEES/programs/Fiji.app/jars/javax.inject-1.jar
+7f9392b75000-7f9392b84000 r--s 0013a000 fd:03 31336270                   /media/baecker/DONNEES/programs/Fiji.app/jars/protobuf-java-3.2.0.jar
+7f9392b84000-7f9392b87000 r--s 0000e000 fd:03 31336242                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-container-servlet-core-2.25.1.jar
+7f9392b87000-7f9392b9c000 r--s 000d1000 fd:03 31336239                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-server-2.25.1.jar
+7f9392b9c000-7f9392ba5000 r--s 00046000 fd:03 31336107                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-aop-3.0.1.RELEASE.jar
+7f9392ba5000-7f9392bac000 r--s 00031000 fd:03 31336124                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-tx-3.0.1.RELEASE.jar
+7f9392bac000-7f9392bb6000 r--s 00053000 fd:03 31336153                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-jdbc-3.0.1.RELEASE.jar
+7f9392bb6000-7f9392bc1000 r--s 0007b000 fd:03 31336119                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-beans-3.0.1.RELEASE.jar
+7f9392bc1000-7f9392bc9000 r--s 00049000 fd:03 31336144                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-orm-3.0.1.RELEASE.jar
+7f9392bc9000-7f9392bd7000 r--s 000b6000 fd:03 31336130                   /media/baecker/DONNEES/programs/Fiji.app/jars/freemarker-2.3.8.jar
+7f9392bd7000-7f9392bde000 r--s 00050000 fd:03 31336103                   /media/baecker/DONNEES/programs/Fiji.app/jars/hibernate-tools-3.2.0.beta11.jar
+7f9392bde000-7f9392bdf000 r--s 00004000 fd:03 31336135                   /media/baecker/DONNEES/programs/Fiji.app/jars/lucene-spellchecker-2.4.1.jar
+7f9392bdf000-7f9392be4000 r--s 00014000 fd:03 31336109                   /media/baecker/DONNEES/programs/Fiji.app/jars/hibernate-jpa-2.0-api-1.0.0.Final.jar
+7f9392be4000-7f9392be7000 r--s 0000d000 fd:03 31336095                   /media/baecker/DONNEES/programs/Fiji.app/jars/hibernate-validator-3.1.0.GA.jar
+7f9392be7000-7f9392bf0000 r--s 000a4000 fd:03 31336133                   /media/baecker/DONNEES/programs/Fiji.app/jars/hsqldb-1.8.0.10.jar
+7f9392bf0000-7f9392bf7000 r--s 00046000 fd:03 31336148                   /media/baecker/DONNEES/programs/Fiji.app/jars/hibernate-search-3.1.1.GA.jar
+7f9392bf7000-7f9392c38000 r--s 00376000 fd:03 31336117                   /media/baecker/DONNEES/programs/Fiji.app/jars/hibernate-core-3.5.6-4510.jar
+7f9392c38000-7f9392c40000 r--s 00097000 fd:03 31336068                   /media/baecker/DONNEES/programs/Fiji.app/jars/postgresql-9.4-1200-jdbc4.jar
+7f9392c40000-7f9392c45000 r--s 00048000 fd:03 31336126                   /media/baecker/DONNEES/programs/Fiji.app/jars/dom4j-1.6.1.jar
+7f9392c45000-7f9392c4c000 r--s 0003e000 fd:03 31336115                   /media/baecker/DONNEES/programs/Fiji.app/jars/cglib-2.2.jar
+7f9392c4c000-7f9392c4e000 r--s 00003000 fd:03 31336108                   /media/baecker/DONNEES/programs/Fiji.app/jars/asm-attrs-1.5.3.jar
+7f9392c4e000-7f9392c54000 r--s 00067000 fd:03 31336140                   /media/baecker/DONNEES/programs/Fiji.app/jars/antlr-2.7.6.jar
+7f9392c54000-7f9392c5c000 r--s 00051000 fd:03 31336112                   /media/baecker/DONNEES/programs/Fiji.app/jars/velocity-1.4.jar
+7f9392c5c000-7f9392c5e000 r--s 00009000 fd:03 31336099                   /media/baecker/DONNEES/programs/Fiji.app/jars/reportng-1.1.1.jar
+7f9392c5e000-7f9392c60000 r--s 0000e000 fd:03 31336093                   /media/baecker/DONNEES/programs/Fiji.app/jars/oro-2.0.8.jar
+7f9392c60000-7f9392c63000 r--s 0000e000 fd:03 31336070                   /media/baecker/DONNEES/programs/Fiji.app/jars/jmock-1.0.1.jar
+7f9392c63000-7f9392c64000 r--s 0000c000 fd:03 31336102                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-asm-3.0.1.RELEASE.jar
+7f9392c64000-7f9392c6c000 r--s 0004f000 fd:03 31336128                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-core-3.0.1.RELEASE.jar
+7f9392c6c000-7f9392c79000 r--s 0007a000 fd:03 31336138                   /media/baecker/DONNEES/programs/Fiji.app/jars/checkstyle-4.3.jar
+7f9392c79000-7f9392c7a000 r--s 00002000 fd:03 31336087                   /media/baecker/DONNEES/programs/Fiji.app/jars/velocity-tools-generic-1.1.jar
+7f9392c7a000-7f9392c7b000 r--s 00002000 fd:03 31336062                   /media/baecker/DONNEES/programs/Fiji.app/jars/ant-launcher-1.8.0.jar
+7f9392c7b000-7f9392c92000 r--s 00159000 fd:03 31336067                   /media/baecker/DONNEES/programs/Fiji.app/jars/ant-1.8.0.jar
+7f9392c92000-7f9392c96000 r--s 0001b000 fd:03 31336051                   /media/baecker/DONNEES/programs/Fiji.app/jars/perf4j-0.9.16.jar
+7f9392c96000-7f9392ca1000 r--s 00064000 fd:03 31336097                   /media/baecker/DONNEES/programs/Fiji.app/jars/janino-2.5.10.jar
+7f9392ca1000-7f9392ca3000 r--s 00012000 fd:03 31336132                   /media/baecker/DONNEES/programs/Fiji.app/jars/dsl-5.4.6-ice36-b87.jar
+7f9392ca3000-7f9392caf000 r--s 00140000 fd:03 31336150                   /media/baecker/DONNEES/programs/Fiji.app/jars/model-psql-5.4.6-ice36-b87.jar
+7f9392caf000-7f9392cb5000 r--s 0003f000 fd:03 31336084                   /media/baecker/DONNEES/programs/Fiji.app/jars/httpcore-4.3.jar
+7f9392cb5000-7f9392cc0000 r--s 00084000 fd:03 31336101                   /media/baecker/DONNEES/programs/Fiji.app/jars/httpclient-4.3.1.jar
+7f9392cc0000-7f9392cc1000 r--s 0000e000 fd:03 31336106                   /media/baecker/DONNEES/programs/Fiji.app/jars/java-getopt-1.0.13.jar
+7f9392cc1000-7f9392cc3000 r--s 00008000 fd:03 31336079                   /media/baecker/DONNEES/programs/Fiji.app/jars/ini4j-0.3.2.jar
+7f9392cc3000-7f9392ccf000 r--s 00080000 fd:03 31336122                   /media/baecker/DONNEES/programs/Fiji.app/jars/icegrid-3.6.4.jar
+7f9392ccf000-7f9392cd3000 r--s 00027000 fd:03 31336121                   /media/baecker/DONNEES/programs/Fiji.app/jars/glacier2-3.6.4.jar
+7f9392cd3000-7f9392ce6000 r--s 000f8000 fd:03 31336131                   /media/baecker/DONNEES/programs/Fiji.app/jars/ice-3.6.4.jar
+7f9392ce6000-7f9392ced000 r--s 00030000 fd:03 31336149                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-ldap-core-1.3.0.RELEASE.jar
+7f9392ced000-7f9392cf0000 r--s 00012000 fd:03 31336141                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-security-ldap-3.0.2.RELEASE.jar
+7f9392cf0000-7f9392d06000 r--s 00178000 fd:03 31336139                   /media/baecker/DONNEES/programs/Fiji.app/jars/aspectjweaver-1.6.8.jar
+7f9392d06000-7f9392d10000 r--s 00041000 fd:03 31336123                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-security-core-3.0.2.RELEASE.jar
+7f9392d10000-7f9392d13000 r--s 00025000 fd:03 31336137                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-security-config-3.0.2.RELEASE.jar
+7f9392d13000-7f9392d17000 r--s 00023000 fd:03 31336078                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-expression-3.0.1.RELEASE.jar
+7f9392d17000-7f9392d28000 r--s 00090000 fd:03 31336090                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-context-3.0.1.RELEASE.jar
+7f9392d28000-7f9392d2b000 r--s 00016000 fd:03 31336154                   /media/baecker/DONNEES/programs/Fiji.app/jars/spring-context-support-3.0.1.RELEASE.jar
+7f9392d2b000-7f9392d4a000 r--s 00138000 fd:03 31336152                   /media/baecker/DONNEES/programs/Fiji.app/jars/bcprov-jdk14-136.jar
+7f9392d4a000-7f9392d4f000 r--s 0002a000 fd:03 31336113                   /media/baecker/DONNEES/programs/Fiji.app/jars/bcmail-jdk14-136.jar
+7f9392d4f000-7f9392d51000 r--s 00009000 fd:03 31336100                   /media/baecker/DONNEES/programs/Fiji.app/jars/jempbox-0.2.0.jar
+7f9392d51000-7f9392d53000 r--s 0000e000 fd:03 31336088                   /media/baecker/DONNEES/programs/Fiji.app/jars/fontbox-0.1.0.jar
+7f9392d53000-7f9392d61000 r--s 0031d000 fd:03 31336114                   /media/baecker/DONNEES/programs/Fiji.app/jars/pdfbox-0.7.3.jar
+7f9392d61000-7f9392d68000 r--s 00072000 fd:03 31336082                   /media/baecker/DONNEES/programs/Fiji.app/jars/mail-1.4.4.jar
+7f9392d68000-7f9392d6b000 r--s 00013000 fd:03 31336142                   /media/baecker/DONNEES/programs/Fiji.app/jars/subethasmtp-3.1.7.jar
+7f9392d6b000-7f9392d6f000 r--s 0005b000 fd:03 31336104                   /media/baecker/DONNEES/programs/Fiji.app/jars/quartz-1.5.2.jar
+7f9392d6f000-7f9392d73000 r--s 00020000 fd:03 31336146                   /media/baecker/DONNEES/programs/Fiji.app/jars/jamon-2.75.jar
+7f9392d73000-7f9392d7b000 r--s 00049000 fd:03 31336105                   /media/baecker/DONNEES/programs/Fiji.app/jars/backport-util-concurrent-3.1.jar
+7f9392d7b000-7f9392d7d000 r--s 00009000 fd:03 31336098                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-pool-1.2.jar
+7f9392d7d000-7f9392d82000 r--s 00043000 fd:03 31336111                   /media/baecker/DONNEES/programs/Fiji.app/jars/btm-2.1.3.jar
+7f9392d82000-7f9392d8c000 r--s 00091000 fd:03 31336081                   /media/baecker/DONNEES/programs/Fiji.app/jars/ice-db-3.6.3.jar
+7f9392d8c000-7f9392d8f000 r--s 00029000 fd:03 31336072                   /media/baecker/DONNEES/programs/Fiji.app/jars/freeze-3.6.4.jar
+7f9392d8f000-7f9392d91000 r--s 0000c000 fd:03 31336091                   /media/baecker/DONNEES/programs/Fiji.app/jars/omero-shares-3.6.3.jar
+7f9392d91000-7f9392d93000 r--s 00009000 fd:03 31336073                   /media/baecker/DONNEES/programs/Fiji.app/jars/java-image-scaling-0.8.5.jar
+7f9392d93000-7f9392d94000 r--s 00002000 fd:03 31336071                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-graphite-3.0.2.jar
+7f9392d94000-7f9392d97000 r--s 0001c000 fd:03 31336125                   /media/baecker/DONNEES/programs/Fiji.app/jars/common-5.4.6-ice36-b87.jar
+7f9392d97000-7f9392d9a000 r--s 00015000 fd:03 31336129                   /media/baecker/DONNEES/programs/Fiji.app/jars/rendering-5.4.6-ice36-b87.jar
+7f9392d9a000-7f9392da9000 r--s 00105000 fd:03 31336118                   /media/baecker/DONNEES/programs/Fiji.app/jars/server-5.4.6-ice36-b87.jar
+7f9392da9000-7f9392ecc000 r--s 00f60000 fd:03 31336083                   /media/baecker/DONNEES/programs/Fiji.app/jars/blitz-5.4.6-ice36-b87.jar
+7f9392ecc000-7f9392ed0000 r--s 00013000 fd:03 31336147                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-omero-legacy-0.1.1.jar
+7f9392ed0000-7f9392ed3000 r--s 00018000 fd:03 30935073                   /media/baecker/DONNEES/programs/Fiji.app/jars/spim_data-2.2.2.jar
+7f9392ed3000-7f9392eda000 r--s 00055000 fd:03 31336182                   /media/baecker/DONNEES/programs/Fiji.app/jars/antlr4-runtime-4.5.jar
+7f9392eda000-7f9392ee5000 r--s 00088000 fd:03 31336176                   /media/baecker/DONNEES/programs/Fiji.app/jars/jai-imageio-core-1.3.1.jar
+7f9392ee5000-7f9392ee9000 r--s 0001e000 fd:03 31336169                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-core-3.2.5.jar
+7f9392ee9000-7f9392ef6000 r--s 00086000 fd:03 31336145                   /media/baecker/DONNEES/programs/Fiji.app/jars/jts-1.10.jar
+7f9392ef6000-7f9392ef8000 r--s 00008000 fd:03 31336136                   /media/baecker/DONNEES/programs/Fiji.app/jars/httpmime-4.3.1.jar
+7f9392ef8000-7f9392f06000 r--s 000bb000 fd:03 31336143                   /media/baecker/DONNEES/programs/Fiji.app/jars/lucene-core-2.4.1.jar
+7f9392f06000-7f9392f08000 r--s 00d80000 fd:03 31336287                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-windows-x86_64.jar
+7f9392f08000-7f9392f09000 r--s 00d17000 fd:03 31336286                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-windows-x86.jar
+7f9392f09000-7f9392f0b000 r--s 00bf4000 fd:03 31336285                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-macosx-x86_64.jar
+7f9392f0b000-7f9392f0c000 r--s 00ca2000 fd:03 31336284                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-linux-x86_64.jar
+7f9392f0c000-7f9392f0e000 r--s 00be1000 fd:03 31336291                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-linux-x86.jar
+7f9392f0e000-7f9392f0f000 r--s 00c14000 fd:03 31336326                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-android-x86_64.jar
+7f9392f0f000-7f9392f11000 r--s 00c41000 fd:03 31336290                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-android-x86.jar
+7f9392f11000-7f9392f12000 r--s 00c9f000 fd:03 31336292                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-android-arm64.jar
+7f9392f12000-7f9392f17000 r--s 00051000 fd:03 31336288                   /media/baecker/DONNEES/programs/Fiji.app/jars/javacpp-1.4.1.jar
+7f9392f17000-7f9392f19000 r--s 00022000 fd:03 31336311                   /media/baecker/DONNEES/programs/Fiji.app/jars/jvrpn-1.1.0.jar
+7f9392f19000-7f9392f1b000 r--s 00006000 fd:03 31336323                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-dataformat-msgpack-0.8.14.jar
+7f9392f1b000-7f9392f1f000 r--s 00019000 fd:03 31336322                   /media/baecker/DONNEES/programs/Fiji.app/jars/msgpack-core-0.8.14.jar
+7f9392f1f000-7f9392f20000 r--s 00001000 fd:03 31336283                   /media/baecker/DONNEES/programs/Fiji.app/jars/minlog-1.3.0.jar
+7f9392f20000-7f9392f27000 r--s 0004c000 fd:03 31336282                   /media/baecker/DONNEES/programs/Fiji.app/jars/kryo-4.0.1.jar
+7f9392f27000-7f9392f28000 r--s 00004000 fd:03 31336321                   /media/baecker/DONNEES/programs/Fiji.app/jars/jnacl-0.1.0.jar
+7f9392f28000-7f9392f2f000 r--s 00062000 fd:03 31336296                   /media/baecker/DONNEES/programs/Fiji.app/jars/jeromq-0.4.3.jar
+7f9392f2f000-7f9392f37000 r--s 00265000 fd:03 31336303                   /media/baecker/DONNEES/programs/Fiji.app/jars/spirvcrossj-0.4.2.jar
+7f9392f37000-7f9392f39000 r--s 0000a000 fd:03 31336299                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-module-kotlin-2.9.2.jar
+7f9392f39000-7f9392f3c000 r--s 0000e000 fd:03 31336220                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-annotations-2.9.0.jar
+7f9392f3c000-7f9392f41000 r--s 0005c000 fd:03 31336298                   /media/baecker/DONNEES/programs/Fiji.app/jars/lwjgl-openvr-3.2.0.jar
+7f9392f41000-7f9392f4c000 r--s 000d7000 fd:03 31336307                   /media/baecker/DONNEES/programs/Fiji.app/jars/lwjgl-opengl-3.2.0.jar
+7f9392f4c000-7f9392f64000 r--s 001b8000 fd:03 31336313                   /media/baecker/DONNEES/programs/Fiji.app/jars/lwjgl-vulkan-3.2.0.jar
+7f9392f64000-7f9392f66000 r--s 00008000 fd:03 31336312                   /media/baecker/DONNEES/programs/Fiji.app/jars/lwjgl-jemalloc-3.2.0.jar
+7f9392f66000-7f9392f6a000 r--s 00019000 fd:03 31336304                   /media/baecker/DONNEES/programs/Fiji.app/jars/lwjgl-glfw-3.2.0.jar
+7f9392f6a000-7f9392f6f000 r--s 00048000 fd:03 31336314                   /media/baecker/DONNEES/programs/Fiji.app/jars/lwjgl-3.2.0.jar
+7f9392f6f000-7f9392f85000 r--s 001b0000 fd:03 31336315                   /media/baecker/DONNEES/programs/Fiji.app/jars/jna-platform-4.2.2.jar
+7f9392f85000-7f9392f86000 r--s 00001000 fd:03 31336308                   /media/baecker/DONNEES/programs/Fiji.app/jars/jutils-1.0.0.jar
+7f9392f86000-7f9392f8f000 r--s 000dc000 fd:03 31336309                   /media/baecker/DONNEES/programs/Fiji.app/jars/bridj-0.7.0.jar
+7f9392f8f000-7f9392f92000 r--s 00016000 fd:03 31336305                   /media/baecker/DONNEES/programs/Fiji.app/jars/CoreMem-0.4.3.jar
+7f9392f92000-7f9392f93000 r--s 00013000 fd:03 31336302                   /media/baecker/DONNEES/programs/Fiji.app/jars/cleargl-2.2.1.jar
+7f9392f93000-7f9392f94000 r--s 00000000 fd:03 31336329                   /media/baecker/DONNEES/programs/Fiji.app/jars/atomicfu-common-0.10.3.jar
+7f9392f94000-7f9392f99000 r--s 00012000 fd:03 31336328                   /media/baecker/DONNEES/programs/Fiji.app/jars/kotlinx-coroutines-core-common-0.23.4.jar
+7f9392f99000-7f9392fa4000 r--s 0008d000 fd:03 31336320                   /media/baecker/DONNEES/programs/Fiji.app/jars/kotlinx-coroutines-core-0.23.4.jar
+7f9392fa4000-7f9392fa6000 r--s 00003000 fd:03 31336306                   /media/baecker/DONNEES/programs/Fiji.app/jars/annotations-13.0.jar
+7f9392fa6000-7f9392fb9000 r--s 001bf000 fd:03 31336300                   /media/baecker/DONNEES/programs/Fiji.app/jars/scenery-0.6.2.jar
+7f9392fb9000-7f9392fbe000 r--s 00030000 fd:03 31336317                   /media/baecker/DONNEES/programs/Fiji.app/jars/jinput-2.0.7.jar
+7f9392fbe000-7f9392fbf000 r--s 00000000 fd:03 31336324                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-platform-3.4.2-1.4.1.jar
+7f9392fbf000-7f9392fc0000 r--s 00004000 fd:03 31336231                   /media/baecker/DONNEES/programs/Fiji.app/jars/osgi-resource-locator-1.0.1.jar
+7f9392fc0000-7f9392fc2000 r--s 00007000 fd:03 31336236                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-module-jaxb-annotations-2.9.1.jar
+7f9392fc2000-7f9392fc3000 r--s 01ff4000 fd:03 31336265                   /media/baecker/DONNEES/programs/Fiji.app/jars/libtensorflow_jni-1.2.0.jar
+7f9392fc3000-7f9392fc6000 r--s 00013000 fd:03 31336077                   /media/baecker/DONNEES/programs/Fiji.app/jars/icestorm-3.6.4.jar
+7f9392fc6000-7f9392fc8000 r--s 00016000 fd:03 34999364                   /media/baecker/DONNEES/programs/Fiji.app/jars/groovy-templates-2.4.8.jar
+7f9392fc8000-7f9392fc9000 r--s 00001000 fd:03 31336189                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-annotation-3.2.5.jar
+7f9392fc9000-7f9392fca000 r--s 0000a000 fd:03 31336293                   /media/baecker/DONNEES/programs/Fiji.app/jars/parsington-1.0.3.jar
+7f9392fca000-7f9392fcb000 r--s 0010a000 fd:03 31197412                   /media/baecker/DONNEES/programs/Fiji.app/jars/klb-0.3.6.jar
+7f9392fcb000-7f9392fcd000 r--s 0000d000 fd:03 31197413                   /media/baecker/DONNEES/programs/Fiji.app/jars/klb-bdv-0.2.1.jar
+7f9392fcd000-7f9392fcf000 r--s 00003000 fd:03 31336197                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-container-servlet-2.25.1.jar
+7f9392fcf000-7f9392fd0000 r--s 00000000 fd:03 34999436                   /media/baecker/DONNEES/programs/Fiji.app/jars/jogl-all-main-2.3.2.jar
+7f9392fd0000-7f9392fd5000 r--s 00031000 fd:03 34999432                   /media/baecker/DONNEES/programs/Fiji.app/jars/jocl-2.3.2.jar
+7f9392fd5000-7f9392fd6000 r--s 00000000 fd:03 34999433                   /media/baecker/DONNEES/programs/Fiji.app/jars/jocl-main-2.3.2.jar
+7f9392fd6000-7f9392fd8000 r--s 0000f000 fd:03 34999430                   /media/baecker/DONNEES/programs/Fiji.app/jars/joal-2.3.2.jar
+7f9392fd8000-7f9392fd9000 r--s 00000000 fd:03 34999431                   /media/baecker/DONNEES/programs/Fiji.app/jars/joal-main-2.3.2.jar
+7f9392fd9000-7f9392fda000 r--s 00001000 fd:03 34999513                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-config-2.0.2.jar
+7f9392fda000-7f9392fdc000 r--s 00008000 fd:03 34999507                   /media/baecker/DONNEES/programs/Fiji.app/jars/scifio-cli-0.5.0.jar
+7f9392fdc000-7f9392fde000 r--s 0001a000 fd:03 34999511                   /media/baecker/DONNEES/programs/Fiji.app/jars/scifio-ome-xml-0.15.0.jar
+7f9392fde000-7f9392fdf000 r--s 00004000 fd:03 34999510                   /media/baecker/DONNEES/programs/Fiji.app/jars/scifio-lifesci-0.8.0.jar
+7f9392fdf000-7f9392fe1000 r--s 00004000 fd:03 34999506                   /media/baecker/DONNEES/programs/Fiji.app/jars/scifio-bf-compat-3.0.0.jar
+7f9392fe1000-7f9392fe3000 r--s 0000d000 fd:03 34999538                   /media/baecker/DONNEES/programs/Fiji.app/jars/trakem2-transform-1.0.1.jar
+7f9392fe3000-7f9392fe4000 r--s 00001000 fd:03 34999282                   /media/baecker/DONNEES/programs/Fiji.app/jars/T2-TreelineGraph-1.1.2.jar
+7f9392fe4000-7f9392ff8000 r--s 001bd000 fd:03 34999402                   /media/baecker/DONNEES/programs/Fiji.app/jars/jai-core-1.1.3.jar
+7f9392ff8000-7f9392ffa000 r--s 00149000 fd:03 34999281                   /media/baecker/DONNEES/programs/Fiji.app/jars/T2-NIT-1.1.2.jar
+7f9392ffa000-7f9392ffc000 r--s 00014000 fd:03 34999311                   /media/baecker/DONNEES/programs/Fiji.app/jars/bigdataviewer-vistools-1.0.0-beta-11.jar
+7f9392ffc000-7f9392fff000 r--s 0001b000 fd:03 34999541                   /media/baecker/DONNEES/programs/Fiji.app/jars/ui-behaviour-1.7.3.jar
+7f9392fff000-7f9393008000 r--s 00071000 fd:03 34999310                   /media/baecker/DONNEES/programs/Fiji.app/jars/bigdataviewer-core-5.0.0.jar
+7f9393008000-7f939300f000 r--s 0004b000 fd:03 34999336                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-codec-1.11.jar
+7f939300f000-7f9393011000 r--s 0000e000 fd:03 34999407                   /media/baecker/DONNEES/programs/Fiji.app/jars/jcommander-1.48.jar
+7f9393011000-7f939301e000 r--s 00083000 fd:03 34999337                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-collections-3.2.2.jar
+7f939301e000-7f9393023000 r--s 00038000 fd:03 34999335                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-beanutils-1.9.3.jar
+7f9393023000-7f9393025000 r--s 00012000 fd:03 34999486                   /media/baecker/DONNEES/programs/Fiji.app/jars/opencsv-3.9.jar
+7f9393025000-7f9393027000 r--s 0000e000 fd:03 34999395                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-ui-2.0.0.jar
+7f9393027000-7f9393028000 r--s 00003000 fd:03 34999544                   /media/baecker/DONNEES/programs/Fiji.app/jars/weave_jy2java-2.1.0.jar
+7f9393028000-7f939302a000 r--s 00007000 fd:03 34999415                   /media/baecker/DONNEES/programs/Fiji.app/jars/jgoodies-common-1.7.0.jar
+7f939302a000-7f939302c000 r--s 0001b000 fd:03 34999416                   /media/baecker/DONNEES/programs/Fiji.app/jars/jgoodies-forms-1.7.2.jar
+7f939302c000-7f939303d000 r--s 000c5000 fd:03 34999454                   /media/baecker/DONNEES/programs/Fiji.app/jars/legacy-imglib1-1.1.9.jar
+7f939303d000-7f9393042000 r--s 00041000 fd:03 34999340                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-lang-2.6.jar
+7f9393042000-7f939305d000 r--s 008d1000 fd:03 34999419                   /media/baecker/DONNEES/programs/Fiji.app/jars/jhdf5-14.12.6.jar
+7f939305d000-7f939305f000 r--s 00015000 fd:03 34999353                   /media/baecker/DONNEES/programs/Fiji.app/jars/fiji-lib-2.1.2.jar
+7f939305f000-7f9393060000 r--s 0000a000 fd:03 34999488                   /media/baecker/DONNEES/programs/Fiji.app/jars/pal-optimization-2.0.1.jar
+7f9393060000-7f9393067000 r--s 00095000 fd:03 34999283                   /media/baecker/DONNEES/programs/Fiji.app/jars/VIB-lib-2.2.0.jar
+7f9393067000-7f9393072000 r--s 000b6000 fd:03 34999418                   /media/baecker/DONNEES/programs/Fiji.app/jars/jgraphx-3.4.1.3.jar
+7f9393072000-7f9393079000 r--s 00035000 fd:03 34999417                   /media/baecker/DONNEES/programs/Fiji.app/jars/jgrapht-0.8.3.jar
+7f9393079000-7f939307e000 r--s 00032000 fd:03 34999307                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-svggen-1.10.jar
+7f939307e000-7f9393080000 r--s 00002000 fd:03 34999301                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-ext-1.10.jar
+7f9393080000-7f9393084000 r--s 00029000 fd:03 34999300                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-dom-1.10.jar
+7f9393084000-7f939308a000 r--s 00045000 fd:03 34999410                   /media/baecker/DONNEES/programs/Fiji.app/jars/jdom2-2.0.6.jar
+7f939308a000-7f939308c000 r--s 0000a000 fd:03 34999443                   /media/baecker/DONNEES/programs/Fiji.app/jars/json-20090211.jar
+7f939308c000-7f9393091000 r--s 00018000 fd:03 34999279                   /media/baecker/DONNEES/programs/Fiji.app/jars/JWlz-1.4.0.jar
+7f9393091000-7f93930ac000 r--s 0012c000 fd:03 31336156                   /media/baecker/DONNEES/programs/Fiji.app/jars/ehcache-core-2.6.2.jar
+7f93930ac000-7f93930de000 r--s 0042f000 fd:03 34999480                   /media/baecker/DONNEES/programs/Fiji.app/jars/netcdf-4.3.22.jar
+7f93930de000-7f93930f5000 r--s 00112000 fd:03 34999547                   /media/baecker/DONNEES/programs/Fiji.app/jars/xercesImpl-2.8.1.jar
+7f93930f5000-7f93930f7000 r--s 0001b000 fd:03 34999550                   /media/baecker/DONNEES/programs/Fiji.app/jars/xmpcore-5.1.2.jar
+7f93930f7000-7f93930fb000 r--s 00030000 fd:03 34999469                   /media/baecker/DONNEES/programs/Fiji.app/jars/metadata-extractor-2.6.2.jar
+7f93930fb000-7f93930fe000 r--s 00010000 fd:03 34999286                   /media/baecker/DONNEES/programs/Fiji.app/jars/args4j-2.0.25.jar
+7f93930fe000-7f9393104000 r--s 00041000 fd:03 34999462                   /media/baecker/DONNEES/programs/Fiji.app/jars/logback-classic-1.2.3.jar
+7f9393104000-7f939310f000 r--s 00069000 fd:03 34999463                   /media/baecker/DONNEES/programs/Fiji.app/jars/logback-core-1.2.3.jar
+7f939310f000-7f9393111000 r--s 00009000 fd:03 34999531                   /media/baecker/DONNEES/programs/Fiji.app/jars/slf4j-api-1.7.25.jar
+7f9393111000-7f9393113000 r--s 00004000 fd:03 34999280                   /media/baecker/DONNEES/programs/Fiji.app/jars/OMEVisual-1.1.2.jar
+7f9393113000-7f939311c000 r--s 0007f000 fd:03 34999411                   /media/baecker/DONNEES/programs/Fiji.app/jars/jep-2.4.2.jar
+7f939311c000-7f9393120000 r--s 00023000 fd:03 34999390                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-algorithm-gpl-0.2.3.jar
+7f9393120000-7f9393320000 rw-p 00000000 00:00 0 
+7f9393320000-7f939332b000 r--s 0015c000 fd:03 34999439                   /media/baecker/DONNEES/programs/Fiji.app/jars/jpedalSTD-2.80b11.jar
+7f939332b000-7f939332c000 r--s 00007000 fd:03 34999370                   /media/baecker/DONNEES/programs/Fiji.app/jars/image4j-0.7.jar
+7f939332c000-7f939332f000 r--s 0002c000 fd:03 34999302                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-gvt-1.10.jar
+7f939332f000-7f9393334000 r--s 00010000 fd:03 34999548                   /media/baecker/DONNEES/programs/Fiji.app/jars/xml-apis-ext-1.3.04.jar
+7f9393334000-7f939333f000 r--s 00099000 fd:03 34999549                   /media/baecker/DONNEES/programs/Fiji.app/jars/xmlgraphics-commons-2.3.jar
+7f939333f000-7f9393341000 r--s 00007000 fd:03 34999309                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-xml-1.10.jar
+7f9393341000-7f9393342000 r--s 00002000 fd:03 34999303                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-i18n-1.10.jar
+7f9393342000-7f9393345000 r--s 0001d000 fd:03 34999308                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-util-1.10.jar
+7f9393345000-7f9393349000 r--s 00035000 fd:03 34999306                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-svg-dom-1.10.jar
+7f9393349000-7f939334b000 r--s 00011000 fd:03 34999304                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-parser-1.10.jar
+7f939334b000-7f9393353000 r--s 00048000 fd:03 34999299                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-css-1.10.jar
+7f9393353000-7f939335b000 r--s 00060000 fd:03 34999296                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-awt-util-1.10.jar
+7f939335b000-7f9393367000 r--s 0006a000 fd:03 34999295                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-anim-1.10.jar
+7f9393367000-7f939336c000 r--s 00052000 fd:03 34999475                   /media/baecker/DONNEES/programs/Fiji.app/jars/mpicbg-1.2.0.jar
+7f939336c000-7f9393384000 r--s 0021f000 fd:03 34999397                   /media/baecker/DONNEES/programs/Fiji.app/jars/itextpdf-5.5.13.jar
+7f9393384000-7f9393388000 r--s 0015c000 fd:03 34999422                   /media/baecker/DONNEES/programs/Fiji.app/jars/jna-4.5.1.jar
+7f9393388000-7f939338d000 r--s 0003d000 fd:03 34999476                   /media/baecker/DONNEES/programs/Fiji.app/jars/mtj-1.0.4.jar
+7f939338d000-7f9393391000 r--s 0002f000 fd:03 34999328                   /media/baecker/DONNEES/programs/Fiji.app/jars/bounce-0.18.jar
+7f9393391000-7f9393395000 r--s 00095000 fd:03 34999437                   /media/baecker/DONNEES/programs/Fiji.app/jars/joml-1.9.9.jar
+7f9393395000-7f93933a4000 r--s 000f1000 fd:03 34999400                   /media/baecker/DONNEES/programs/Fiji.app/jars/j3dutils-1.6.0-scijava-2.jar
+7f93933a4000-7f93933c8000 r--s 0031e000 fd:03 34999435                   /media/baecker/DONNEES/programs/Fiji.app/jars/jogl-all-2.3.2.jar
+7f93933c8000-7f93933d5000 r--s 001ce000 fd:03 34999399                   /media/baecker/DONNEES/programs/Fiji.app/jars/j3dcore-1.6.0-scijava-2.jar
+7f93933d5000-7f93933d8000 r--s 00026000 fd:03 34999543                   /media/baecker/DONNEES/programs/Fiji.app/jars/vecmath-1.6.0-scijava-2.jar
+7f93933d8000-7f93933dc000 r--s 00031000 fd:03 34999339                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-io-2.6.jar
+7f93933dc000-7f93933e0000 r--s 00021000 fd:03 34999292                   /media/baecker/DONNEES/programs/Fiji.app/jars/autocomplete-2.6.1.jar
+7f93933e0000-7f93933ed000 r--s 00116000 fd:03 34999499                   /media/baecker/DONNEES/programs/Fiji.app/jars/rhino-1.7.6.jar
+7f93933ed000-7f93933fd000 r--s 00104000 fd:03 34999452                   /media/baecker/DONNEES/programs/Fiji.app/jars/languagesupport-2.6.0.jar
+7f93933fd000-7f9393409000 r--s 0010f000 fd:03 34999500                   /media/baecker/DONNEES/programs/Fiji.app/jars/rsyntaxtextarea-2.6.1.jar
+7f9393409000-7f939340b000 r--s 00000000 fd:03 34999517                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-plugins-text-plain-0.1.3.jar
+7f939340b000-7f939340d000 r--s 00009000 fd:03 34999465                   /media/baecker/DONNEES/programs/Fiji.app/jars/markdownj-0.3.0-1.0.2b4.jar
+7f939340d000-7f939340f000 r--s 00000000 fd:03 34999516                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-plugins-text-markdown-0.1.3.jar
+7f939340f000-7f9393410000 r--s 00005000 fd:03 34999514                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-plugins-commands-0.2.3.jar
+7f9393410000-7f9393421000 r--s 0016c000 fd:03 34999414                   /media/baecker/DONNEES/programs/Fiji.app/jars/jfreechart-1.5.0.jar
+7f9393421000-7f9393422000 r--s 00002000 fd:03 34999384                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-ui-awt-0.3.1.jar
+7f9393422000-7f9393443000 r--s 001e0000 fd:03 34999420                   /media/baecker/DONNEES/programs/Fiji.app/jars/jhotdraw-7.6.0.jar
+7f9393443000-7f9393449000 r--s 0004b000 fd:03 34999408                   /media/baecker/DONNEES/programs/Fiji.app/jars/jcommon-1.0.24.jar
+7f9393449000-7f939344f000 r--s 0003b000 fd:03 34999385                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-ui-swing-0.21.4.jar
+7f939344f000-7f9393460000 r--s 0008c000 fd:03 34999434                   /media/baecker/DONNEES/programs/Fiji.app/jars/joda-time-2.10.jar
+7f9393460000-7f9393466000 r--s 00080000 fd:03 34999504                   /media/baecker/DONNEES/programs/Fiji.app/jars/scala-xml_2.12-1.0.6.jar
+7f9393466000-7f9393488000 r--s 0033e000 fd:03 34999503                   /media/baecker/DONNEES/programs/Fiji.app/jars/scala-reflect-2.12.1.jar
+7f9393488000-7f93934c0000 r--s 004d0000 fd:03 34999502                   /media/baecker/DONNEES/programs/Fiji.app/jars/scala-library-2.12.1.jar
+7f93934c0000-7f939350b000 r--s 00910000 fd:03 34999501                   /media/baecker/DONNEES/programs/Fiji.app/jars/scala-compiler-2.12.1.jar
+7f939350b000-7f939350c000 r--s 00001000 fd:03 34999530                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-scala-0.2.1.jar
+7f939350c000-7f939350e000 r--s 0000e000 fd:03 34999342                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-logging-1.2.jar
+7f939350e000-7f9393511000 r--s 0001e000 fd:03 34999361                   /media/baecker/DONNEES/programs/Fiji.app/jars/graphics-0.8.1906.jar
+7f9393511000-7f9393514000 r--s 00014000 fd:03 34999360                   /media/baecker/DONNEES/programs/Fiji.app/jars/grDevices-0.8.1906.jar
+7f9393514000-7f939351b000 r--s 0005a000 fd:03 34999542                   /media/baecker/DONNEES/programs/Fiji.app/jars/utils-0.8.1906.jar
+7f939351b000-7f939351e000 r--s 00026000 fd:03 34999346                   /media/baecker/DONNEES/programs/Fiji.app/jars/datasets-0.8.1906.jar
+7f939351e000-7f939352a000 r--s 0013b000 fd:03 34999470                   /media/baecker/DONNEES/programs/Fiji.app/jars/methods-0.8.1906.jar
+7f939352a000-7f939352c000 r--s 00013000 fd:03 34999497                   /media/baecker/DONNEES/programs/Fiji.app/jars/renjin-gnur-runtime-0.8.1906.jar
+7f939352c000-7f939352d000 r--s 00005000 fd:03 34999495                   /media/baecker/DONNEES/programs/Fiji.app/jars/renjin-appl-0.8.1906.jar
+7f939352d000-7f9393539000 r--s 000ae000 fd:03 34999534                   /media/baecker/DONNEES/programs/Fiji.app/jars/stats-0.8.1906.jar
+7f9393539000-7f939353d000 r--s 00022000 fd:03 34999333                   /media/baecker/DONNEES/programs/Fiji.app/jars/codemodel-2.6.jar
+7f939353d000-7f939353f000 r--s 0000c000 fd:03 31336281                   /media/baecker/DONNEES/programs/Fiji.app/jars/asm-5.0.4.jar
+7f939353f000-7f9393541000 r--s 0000e000 fd:03 34999448                   /media/baecker/DONNEES/programs/Fiji.app/jars/jung-graph-impl-2.0.1.jar
+7f9393541000-7f939354d000 r--s 00076000 fd:03 34999334                   /media/baecker/DONNEES/programs/Fiji.app/jars/collections-generic-4.01.jar
+7f939354d000-7f9393550000 r--s 00008000 fd:03 34999447                   /media/baecker/DONNEES/programs/Fiji.app/jars/jung-api-2.0.1.jar
+7f9393550000-7f9393554000 r--s 00014000 fd:03 34999551                   /media/baecker/DONNEES/programs/Fiji.app/jars/xz-1.0.jar
+7f9393554000-7f9393559000 r--s 00036000 fd:03 34999338                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-compress-1.4.1.jar
+7f9393559000-7f939355b000 r--s 00005000 fd:03 34999494                   /media/baecker/DONNEES/programs/Fiji.app/jars/regexp-1.3.jar
+7f939355b000-7f939355d000 r--s 00008000 fd:03 34999467                   /media/baecker/DONNEES/programs/Fiji.app/jars/maven-scm-provider-svn-commons-1.4.jar
+7f939355d000-7f9393562000 r--s 00039000 fd:03 34999491                   /media/baecker/DONNEES/programs/Fiji.app/jars/plexus-utils-1.5.6.jar
+7f9393562000-7f9393566000 r--s 00014000 fd:03 34999466                   /media/baecker/DONNEES/programs/Fiji.app/jars/maven-scm-api-1.4.jar
+7f9393566000-7f939356f000 r--s 0005d000 fd:03 34999345                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-vfs2-2.0.jar
+7f939356f000-7f9393571000 r--s 0000d000 fd:03 34999327                   /media/baecker/DONNEES/programs/Fiji.app/jars/blas-0.8.jar
+7f9393571000-7f9393572000 r--s 00000000 fd:03 34999546                   /media/baecker/DONNEES/programs/Fiji.app/jars/xerbla-0.8.jar
+7f9393572000-7f9393574000 r--s 0000f000 fd:03 34999349                   /media/baecker/DONNEES/programs/Fiji.app/jars/f2jutil-0.8.jar
+7f9393574000-7f9393575000 r--s 00093000 fd:03 34999481                   /media/baecker/DONNEES/programs/Fiji.app/jars/netlib-java-0.9.3-renjin-patched-2.jar
+7f9393575000-7f9393577000 r--s 00004000 fd:03 34999355                   /media/baecker/DONNEES/programs/Fiji.app/jars/gcc-runtime-0.8.1906.jar
+7f9393577000-7f939358a000 r--s 000df000 fd:03 34999343                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-math-2.2.jar
+7f939358a000-7f93935b9000 r--s 002e2000 fd:03 34999496                   /media/baecker/DONNEES/programs/Fiji.app/jars/renjin-core-0.8.1906.jar
+7f93935b9000-7f93935bb000 r--s 00003000 fd:03 34999498                   /media/baecker/DONNEES/programs/Fiji.app/jars/renjin-script-engine-0.8.1906.jar
+7f93935bb000-7f93935bc000 r--s 00001000 fd:03 34999529                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-renjin-0.2.2.jar
+7f93935bc000-7f93937af000 r--s 025ab000 fd:03 34999449                   /media/baecker/DONNEES/programs/Fiji.app/jars/jython-shaded-2.7.1.jar
+7f93937af000-7f93937b0000 r--s 00001000 fd:03 34999528                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-jython-0.4.2.jar
+7f93937b0000-7f93937b2000 r--s 00010000 fd:03 34999450                   /media/baecker/DONNEES/programs/Fiji.app/jars/jzlib-1.1.3.jar
+7f93937b2000-7f93937f0000 r--s 00a05000 fd:03 34999441                   /media/baecker/DONNEES/programs/Fiji.app/jars/jruby-stdlib-1.7.12.jar
+7f93937f0000-7f93937f1000 r--s 00003000 fd:03 34999487                   /media/baecker/DONNEES/programs/Fiji.app/jars/options-1.1.jar
+7f93937f1000-7f93937f4000 r--s 0002c000 fd:03 34999552                   /media/baecker/DONNEES/programs/Fiji.app/jars/yecht-1.0.jar
+7f93937f4000-7f93937f6000 r--s 00007000 fd:03 34999478                   /media/baecker/DONNEES/programs/Fiji.app/jars/nailgun-server-0.9.1.jar
+7f93937f6000-7f93937f7000 r--s 00008000 fd:03 34999396                   /media/baecker/DONNEES/programs/Fiji.app/jars/invokebinder-1.2.jar
+7f93937f7000-7f93937f9000 r--s 0005d000 fd:03 34999412                   /media/baecker/DONNEES/programs/Fiji.app/jars/jffi-1.2.7-native.jar
+7f93937f9000-7f93937fd000 r--s 00020000 fd:03 34999413                   /media/baecker/DONNEES/programs/Fiji.app/jars/jffi-1.2.7.jar
+7f93937fd000-7f9393806000 r--s 00133000 fd:03 34999406                   /media/baecker/DONNEES/programs/Fiji.app/jars/jcodings-1.0.10.jar
+7f9393806000-7f939380b000 r--s 00048000 fd:03 34999423                   /media/baecker/DONNEES/programs/Fiji.app/jars/jnr-constants-0.8.5.jar
+7f939380b000-7f939380c000 r--s 00002000 fd:03 34999330                   /media/baecker/DONNEES/programs/Fiji.app/jars/bytelist-1.0.11.jar
+7f939380c000-7f9393810000 r--s 00023000 fd:03 34999427                   /media/baecker/DONNEES/programs/Fiji.app/jars/jnr-posix-3.0.1.jar
+7f9393810000-7f9393812000 r--s 00004000 fd:03 34999428                   /media/baecker/DONNEES/programs/Fiji.app/jars/jnr-unixsocket-0.3.jar
+7f9393812000-7f9393814000 r--s 00007000 fd:03 34999424                   /media/baecker/DONNEES/programs/Fiji.app/jars/jnr-enxio-0.4.jar
+7f9393814000-7f9393817000 r--s 0002b000 fd:03 34999438                   /media/baecker/DONNEES/programs/Fiji.app/jars/joni-2.1.1.jar
+7f9393817000-7f9393819000 r--s 00008000 fd:03 34999291                   /media/baecker/DONNEES/programs/Fiji.app/jars/asm-util-4.0.jar
+7f9393819000-7f939381a000 r--s 00004000 fd:03 34999288                   /media/baecker/DONNEES/programs/Fiji.app/jars/asm-analysis-4.0.jar
+7f939381a000-7f939381c000 r--s 00004000 fd:03 34999290                   /media/baecker/DONNEES/programs/Fiji.app/jars/asm-tree-4.0.jar
+7f939381c000-7f939381e000 r--s 00008000 fd:03 34999289                   /media/baecker/DONNEES/programs/Fiji.app/jars/asm-commons-4.0.jar
+7f939381e000-7f93938c5000 r--s 0073b000 fd:03 34999440                   /media/baecker/DONNEES/programs/Fiji.app/jars/jruby-core-1.7.12.jar
+7f93938c5000-7f93938c7000 r--s 00001000 fd:03 34999527                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-jruby-0.2.5.jar
+7f93938c7000-7f93938c8000 r--s 0000e000 fd:03 34999473                   /media/baecker/DONNEES/programs/Fiji.app/jars/minimaven-2.2.1.jar
+7f93938c8000-7f93938c9000 r--s 00004000 fd:03 34999525                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-java-0.4.1.jar
+7f93938c9000-7f93938ca000 r--s 0000e000 fd:03 34999445                   /media/baecker/DONNEES/programs/Fiji.app/jars/jsr166y-1.7.0.jar
+7f93938ca000-7f93938d0000 r--s 00037000 fd:03 34999477                   /media/baecker/DONNEES/programs/Fiji.app/jars/multiverse-core-0.7.0.jar
+7f93938d0000-7f93938ec000 r--s 00136000 fd:03 34999359                   /media/baecker/DONNEES/programs/Fiji.app/jars/gpars-1.2.1.jar
+7f93938ec000-7f9393902000 r--s 00124000 fd:03 34999398                   /media/baecker/DONNEES/programs/Fiji.app/jars/ivy-2.4.0.jar
+7f9393902000-7f939394e000 r--s 0040c000 fd:03 34999362                   /media/baecker/DONNEES/programs/Fiji.app/jars/groovy-2.4.8.jar
+7f939394e000-7f939394f000 r--s 00003000 fd:03 34999524                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-groovy-0.2.7.jar
+7f939394f000-7f9393992000 r--s 00332000 fd:03 34999332                   /media/baecker/DONNEES/programs/Fiji.app/jars/clojure-1.8.0.jar
+7f9393992000-7f9393994000 r--s 00001000 fd:03 34999523                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-clojure-0.1.6.jar
+7f9393994000-7f9393999000 r--s 0005a000 fd:03 34999329                   /media/baecker/DONNEES/programs/Fiji.app/jars/bsh-2.0b6.jar
+7f9393999000-7f939399a000 r--s 00002000 fd:03 34999522                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-beanshell-0.3.3.jar
+7f939399a000-7f939399c000 r--s 00007000 fd:03 34999383                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-scripting-0.8.2.jar
+7f939399c000-7f939399e000 r--s 00003000 fd:03 34999382                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-plugins-uploader-webdav-0.2.2.jar
+7f939399e000-7f93939a3000 r--s 00040000 fd:03 34999442                   /media/baecker/DONNEES/programs/Fiji.app/jars/jsch-0.1.54.jar
+7f93939a3000-7f93939a5000 r--s 00004000 fd:03 34999381                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-plugins-uploader-ssh-0.3.2.jar
+7f93939a5000-7f93939a7000 r--s 0000b000 fd:03 34999380                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-plugins-tools-0.3.1.jar
+7f93939a7000-7f93939a9000 r--s 00003000 fd:03 34999293                   /media/baecker/DONNEES/programs/Fiji.app/jars/base64-2.3.8.jar
+7f93939a9000-7f93939af000 r--s 00051000 fd:03 34999379                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-plugins-commands-0.8.0.jar
+7f93939af000-7f93939c1000 r--s 0009c000 fd:03 34999373                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-deprecated-0.1.2.jar
+7f93939c1000-7f93939c4000 r--s 00024000 fd:03 34999369                   /media/baecker/DONNEES/programs/Fiji.app/jars/ij1-patcher-0.12.9.jar
+7f93939c4000-7f93939c8000 r--s 00038000 fd:03 34999386                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-updater-0.9.2.jar
+7f93939c8000-7f93939e9000 r--s 0018e000 fd:03 34999484                   /media/baecker/DONNEES/programs/Fiji.app/jars/ojalgo-45.1.1.jar
+7f93939e9000-7f93939ea000 r--s 00006000 fd:03 34999376                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-mesh-0.7.1.jar
+7f93939ea000-7f93939ec000 r--s 00004000 fd:03 34999389                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-algorithm-fft-0.2.0.jar
+7f93939ec000-7f93939f6000 r--s 00070000 fd:03 34999388                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-algorithm-0.9.0.jar
+7f93939f6000-7f93939fe000 r--s 00072000 fd:03 34999341                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-lang3-3.7.jar
+7f93939fe000-7f9393a00000 r--s 0000c000 fd:03 31336294                   /media/baecker/DONNEES/programs/Fiji.app/jars/jply-0.2.0.jar
+7f9393a00000-7f9393a2f000 r--s 00239000 fd:03 34999367                   /media/baecker/DONNEES/programs/Fiji.app/jars/guava-21.0.jar
+7f9393a2f000-7f9393a5f000 r--s 0019f000 fd:03 34999378                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-ops-0.41.1.jar
+7f9393a5f000-7f9393a60000 r--s 00001000 fd:03 34999526                   /media/baecker/DONNEES/programs/Fiji.app/jars/scripting-javascript-0.4.4.jar
+7f9393a60000-7f9393a62000 r--s 00002000 fd:03 34999377                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-notebook-0.2.3.jar
+7f9393a62000-7f9393a68000 r--s 00039000 fd:03 34999394                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-roi-0.5.2.jar
+7f9393a68000-7f9393a6b000 r--s 00016000 fd:03 34999393                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-realtransform-2.0.0.jar
+7f9393a6b000-7f9393a76000 r--s 0006e000 fd:03 34999372                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-common-0.26.1.jar
+7f9393a76000-7f9393a77000 r--s 00002000 fd:03 34999371                   /media/baecker/DONNEES/programs/Fiji.app/jars/imagej-2.0.0-rc-68.jar
+7f9393a77000-7f9393a79000 r--s 0000b000 fd:03 34999351                   /media/baecker/DONNEES/programs/Fiji.app/jars/fiji-2.0.0-pre-7.jar
+7f9393a79000-7f9393a7d000 r--s 0002a000 fd:03 31336180                   /media/baecker/DONNEES/programs/Fiji.app/jars/xchart-3.3.0.jar
+7f9393a7d000-7f9393a7e000 r--s 00000000 fd:03 31336319                   /media/baecker/DONNEES/programs/Fiji.app/jars/kotlin-stdlib-jdk7-1.2.50.jar
+7f9393a7e000-7f9393a90000 r--s 00133000 fd:03 31336249                   /media/baecker/DONNEES/programs/Fiji.app/jars/jackson-databind-2.9.1.jar
+7f9393a90000-7f9393a92000 r--s 00c47000 fd:03 31336289                   /media/baecker/DONNEES/programs/Fiji.app/jars/ffmpeg-3.4.2-1.4.1-android-arm.jar
+7f9393a92000-7f9393a95000 r--s 00071000 fd:03 31336110                   /media/baecker/DONNEES/programs/Fiji.app/jars/bufr-1.1.00.jar
+7f9393a95000-7f9393a97000 r--s 00012000 fd:03 31336268                   /media/baecker/DONNEES/programs/Fiji.app/jars/okio-1.11.0.jar
+7f9393a97000-7f9393a9d000 r--s 00051000 fd:03 31336267                   /media/baecker/DONNEES/programs/Fiji.app/jars/okhttp-3.6.0.jar
+7f9393a9d000-7f9393a9f000 r--s 00002000 fd:03 31336271                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-io-http-0.1.0.jar
+7f9393a9f000-7f9393aa1000 r--s 00004000 fd:03 31336310                   /media/baecker/DONNEES/programs/Fiji.app/jars/reflectasm-1.11.3.jar
+7f9393aa1000-7f9393aa3000 r--s 00019000 fd:03 31336258                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-servlet-9.4.4.v20170414.jar
+7f9393aa3000-7f9393ab3000 r--s 0008e000 fd:03 34999425                   /media/baecker/DONNEES/programs/Fiji.app/jars/jnr-ffi-1.0.7.jar
+7f9393ab3000-7f9393ab9000 r--s 0004f000 fd:03 34999357                   /media/baecker/DONNEES/programs/Fiji.app/jars/gluegen-rt-2.3.2.jar
+7f9393ab9000-7f9393abb000 r--s 00002000 fd:03 31336244                   /media/baecker/DONNEES/programs/Fiji.app/jars/metrics-jersey2-3.2.5.jar
+7f9393abb000-7f9393abd000 r--s 00005000 fd:03 34999305                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-script-1.10.jar
+7f9393abd000-7f9393ac5000 r--s 00068000 fd:03 31336214                   /media/baecker/DONNEES/programs/Fiji.app/jars/jetty-util-9.4.4.v20170414.jar
+7f9393ac5000-7f9393ac6000 r--s 00000000 fd:03 31336272                   /media/baecker/DONNEES/programs/Fiji.app/jars/tensorflow-1.2.0.jar
+7f9393ac6000-7f9393ac8000 r--s 00001000 fd:03 34999298                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-constants-1.10.jar
+7f9393ac8000-7f9393ad4000 r--s 0009f000 fd:03 34999297                   /media/baecker/DONNEES/programs/Fiji.app/jars/batik-bridge-1.10.jar
+7f9393ad4000-7f9393b35000 r--s 0086e000 fd:03 34999545                   /media/baecker/DONNEES/programs/Fiji.app/jars/weka-dev-3.9.2.jar
+7f9393b35000-7f9393b37000 r--s 0000f000 fd:03 31336089                   /media/baecker/DONNEES/programs/Fiji.app/jars/activation-1.1.1.jar
+7f9393b37000-7f9393d3c000 r--s 01b91000 fd:03 31336183                   /media/baecker/DONNEES/programs/Fiji.app/jars/tablesaw-0.7.6.4.jar
+7f9393d3c000-7f9393d42000 r--s 00042000 fd:03 34999444                   /media/baecker/DONNEES/programs/Fiji.app/jars/jsoup-1.7.2.jar
+7f9393d42000-7f9393d44000 r--s 00004000 fd:03 34999285                   /media/baecker/DONNEES/programs/Fiji.app/jars/ahocorasick-0.2.4.jar
+7f9393d44000-7f9393d46000 r--s 00002000 fd:03 34999536                   /media/baecker/DONNEES/programs/Fiji.app/jars/swing-worker-1.1.jar
+7f9393d46000-7f9393d4d000 r--s 0004d000 fd:03 34999354                   /media/baecker/DONNEES/programs/Fiji.app/jars/filters-2.0.235.jar
+7f9393d4d000-7f9393d74000 r--s 001f6000 fd:03 34999344                   /media/baecker/DONNEES/programs/Fiji.app/jars/commons-math3-3.6.1.jar
+7f9393d74000-7f9393d89000 r--s 001d7000 fd:03 34999472                   /media/baecker/DONNEES/programs/Fiji.app/jars/mines-jtk-20151125.jar
+7f9393d89000-7f9393d8b000 r--s 0000c000 fd:03 34999485                   /media/baecker/DONNEES/programs/Fiji.app/jars/op-finder-0.1.3.jar
+7f9393d8b000-7f9393d9b000 r--s 000e6000 fd:03 34999509                   /media/baecker/DONNEES/programs/Fiji.app/jars/scifio-jai-imageio-1.1.1.jar
+7f9393d9b000-7f9393d9c000 r--s 0000c000 fd:03 31336120                   /media/baecker/DONNEES/programs/Fiji.app/jars/lucene-misc-2.4.1.jar
+7f9393d9c000-7f9393d9f000 r--s 0003a000 fd:03 31336094                   /media/baecker/DONNEES/programs/Fiji.app/jars/jtidy-r8-20060801.jar
+7f9393d9f000-7f9393da2000 r--s 0001a000 fd:03 34999493                   /media/baecker/DONNEES/programs/Fiji.app/jars/prettytime-4.0.1.Final.jar
+7f9393da2000-7f9393da4000 r--s 0000e000 fd:03 34999518                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-search-0.5.0.jar
+7f9393da4000-7f9393da9000 r--s 00036000 fd:03 34999366                   /media/baecker/DONNEES/programs/Fiji.app/jars/gson-2.8.5.jar
+7f9393da9000-7f9393db7000 r--s 000dd000 fd:03 34999453                   /media/baecker/DONNEES/programs/Fiji.app/jars/lapack-0.8.jar
+7f9393db7000-7f9393db9000 r--s 00002000 fd:03 31336225                   /media/baecker/DONNEES/programs/Fiji.app/jars/dropwizard-lifecycle-1.2.0.jar
+7f9393db9000-7f9393dc0000 r--s 0003f000 fd:03 31336163                   /media/baecker/DONNEES/programs/Fiji.app/jars/snakeyaml-1.18.jar
+7f9393dc0000-7f9393dc2000 r--s 00003000 fd:03 31336166                   /media/baecker/DONNEES/programs/Fiji.app/jars/jsr305-3.0.2.jar
+7f9393dc2000-7f9393dc5000 r--s 00033000 fd:03 34999429                   /media/baecker/DONNEES/programs/Fiji.app/jars/jnr-x86asm-1.0.2.jar
+7f9393dc5000-7f9393dc7000 r--s 00007000 fd:03 34999409                   /media/baecker/DONNEES/programs/Fiji.app/jars/jdatepicker-1.3.2.jar
+7f9393dc7000-7f9393dc9000 r--s 00005000 fd:03 34999482                   /media/baecker/DONNEES/programs/Fiji.app/jars/object-inspector-0.1.jar
+7f9393dc9000-7f9393dcb000 r--s 00001000 fd:03 34999535                   /media/baecker/DONNEES/programs/Fiji.app/jars/swing-checkbox-tree-1.0.2.jar
+7f9393dcb000-7f9393dcd000 r--s 00011000 fd:03 34999471                   /media/baecker/DONNEES/programs/Fiji.app/jars/miglayout-3.7.4-swing.jar
+7f9393dcd000-7f9393dcf000 r--s 0000a000 fd:03 34999519                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-ui-awt-0.1.6.jar
+7f9393dcf000-7f9393dd3000 r--s 00029000 fd:03 34999520                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-ui-swing-0.11.0.jar
+7f9393dd3000-7f9393dd5000 r--s 00001000 fd:03 34999515                   /media/baecker/DONNEES/programs/Fiji.app/jars/scijava-plugins-platforms-0.3.1.jar
+7f9393dd5000-7f9393de5000 r--s 000a6000 fd:03 31336280                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-5.5.0.jar
+7f9393de5000-7f9393de9000 r--s 00026000 fd:03 31336226                   /media/baecker/DONNEES/programs/Fiji.app/jars/jersey-client-2.25.1.jar
+7f9393de9000-7f9393dec000 r--s 0000d000 fd:03 34999426                   /media/baecker/DONNEES/programs/Fiji.app/jars/jnr-netdb-1.1.2.jar
+7f9393dec000-7f9393def000 r--s 00014000 fd:03 31336085                   /media/baecker/DONNEES/programs/Fiji.app/jars/lucene-highlighter-2.4.1.jar
+7f9393def000-7f9393df3000 r--s 00031000 fd:03 34999365                   /media/baecker/DONNEES/programs/Fiji.app/jars/groovy-xml-2.4.8.jar
+7f9393df3000-7f9393dfe000 r--s 0006f000 fd:03 34999446                   /media/baecker/DONNEES/programs/Fiji.app/jars/jtransforms-2.4.jar
+7f9393dfe000-7f9393e01000 ---p 00000000 00:00 0 
+7f9393e01000-7f9393eff000 rw-p 00000000 00:00 0 
+7f9393eff000-7f9393f02000 ---p 00000000 00:00 0 
+7f9393f02000-7f9394000000 rw-p 00000000 00:00 0 
+7f9394000000-7f9394021000 rw-p 00000000 00:00 0 
+7f9394021000-7f9398000000 ---p 00000000 00:00 0 
+7f9398000000-7f9398002000 r--s 00018000 fd:03 31336092                   /media/baecker/DONNEES/programs/Fiji.app/jars/romio-5.4.6-ice36-b87.jar
+7f9398002000-7f9398004000 r--s 0001d000 fd:03 34999540                   /media/baecker/DONNEES/programs/Fiji.app/jars/udunits-4.3.18.jar
+7f9398004000-7f9398007000 r--s 00012000 fd:03 34999348                   /media/baecker/DONNEES/programs/Fiji.app/jars/eventbus-1.4.jar
+7f9398007000-7f9398009000 r--s 00003000 fd:03 34999356                   /media/baecker/DONNEES/programs/Fiji.app/jars/gentyref-1.1.0.jar
+7f9398009000-7f9398031000 r--s 00241000 fd:03 34999539                   /media/baecker/DONNEES/programs/Fiji.app/jars/trove4j-3.0.3.jar
+7f9398031000-7f939803a000 r--s 0006f000 fd:03 34999461                   /media/baecker/DONNEES/programs/Fiji.app/jars/log4j-1.2.17.jar
+7f939803a000-7f9398040000 r--s 0004f000 fd:03 34999347                   /media/baecker/DONNEES/programs/Fiji.app/jars/ejml-0.24.jar
+7f9398040000-7f9398043000 ---p 00000000 00:00 0 
+7f9398043000-7f9398341000 rw-p 00000000 00:00 0 
+7f9398341000-7f9398344000 ---p 00000000 00:00 0 
+7f9398344000-7f9398442000 rw-p 00000000 00:00 0 
+7f9398442000-7f9398445000 ---p 00000000 00:00 0 
+7f9398445000-7f9398543000 rw-p 00000000 00:00 0 
+7f9398543000-7f9398546000 ---p 00000000 00:00 0 
+7f9398546000-7f9398644000 rw-p 00000000 00:00 0 
+7f9398644000-7f9398647000 ---p 00000000 00:00 0 
+7f9398647000-7f9398745000 rw-p 00000000 00:00 0 
+7f9398745000-7f9398748000 ---p 00000000 00:00 0 
+7f9398748000-7f9398846000 rw-p 00000000 00:00 0 
+7f9398846000-7f9398849000 ---p 00000000 00:00 0 
+7f9398849000-7f9398947000 rw-p 00000000 00:00 0 
+7f9398947000-7f939894a000 ---p 00000000 00:00 0 
+7f939894a000-7f9398a48000 rw-p 00000000 00:00 0 
+7f9398a48000-7f9398a4b000 ---p 00000000 00:00 0 
+7f9398a4b000-7f9398b49000 rw-p 00000000 00:00 0 
+7f9398b49000-7f9398b4c000 ---p 00000000 00:00 0 
+7f9398b4c000-7f9398e4a000 rw-p 00000000 00:00 0 
+7f9398e4a000-7f9398e53000 r-xp 00000000 fd:01 24914237                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libmanagement.so
+7f9398e53000-7f9399052000 ---p 00009000 fd:01 24914237                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libmanagement.so
+7f9399052000-7f9399053000 rw-p 00008000 fd:01 24914237                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libmanagement.so
+7f9399053000-7f9399055000 rw-p 0000c000 fd:01 24914237                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libmanagement.so
+7f9399055000-7f9399058000 ---p 00000000 00:00 0 
+7f9399058000-7f9399156000 rw-p 00000000 00:00 0 
+7f9399156000-7f9399189000 r-xp 00000000 fd:01 24914285                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libsunec.so
+7f9399189000-7f9399389000 ---p 00033000 fd:01 24914285                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libsunec.so
+7f9399389000-7f939938f000 rw-p 00033000 fd:01 24914285                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libsunec.so
+7f939938f000-7f93993a0000 rw-p 00000000 00:00 0 
+7f93993a0000-7f93993a1000 rw-p 00041000 fd:01 24914285                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libsunec.so
+7f93993a1000-7f93993a4000 ---p 00000000 00:00 0 
+7f93993a4000-7f93996a2000 rw-p 00000000 00:00 0 
+7f93996a2000-7f93996a5000 ---p 00000000 00:00 0 
+7f93996a5000-7f93997a3000 rw-p 00000000 00:00 0 
+7f93997a3000-7f93997a6000 ---p 00000000 00:00 0 
+7f93997a6000-7f93998a4000 rw-p 00000000 00:00 0 
+7f93998a4000-7f93998a7000 r--s 00015000 fd:01 24651981                   /home/baecker/anaconda3/envs/beaker/jre/lib/jce.jar
+7f93998a7000-7f93998a8000 r--s 00000000 fd:03 34999358                   /media/baecker/DONNEES/programs/Fiji.app/jars/gluegen-rt-main-2.3.2.jar
+7f93998a8000-7f93998a9000 r--s 00004000 fd:03 34999421                   /media/baecker/DONNEES/programs/Fiji.app/jars/jitk-tps-3.0.0.jar
+7f93998a9000-7f93998c0000 r--s 000d7000 fd:03 34999331                   /media/baecker/DONNEES/programs/Fiji.app/jars/caffeine-2.4.0.jar
+7f93998c0000-7f93998c5000 r--s 00025000 fd:03 34999391                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-cache-1.0.0-beta-9.jar
+7f93998c5000-7f93998c7000 r--s 00011000 fd:03 34999392                   /media/baecker/DONNEES/programs/Fiji.app/jars/imglib2-ij-2.0.0-beta-42.jar
+7f93998c7000-7f93998cb000 r--s 0003c000 fd:03 34999401                   /media/baecker/DONNEES/programs/Fiji.app/jars/jai-codec-1.1.3.jar
+7f93998cb000-7f93998ce000 r--s 0000f000 fd:03 34999468                   /media/baecker/DONNEES/programs/Fiji.app/jars/maven-scm-provider-svnexe-1.4.jar
+7f93998ce000-7f93998d8000 r--s 000ab000 fd:03 30935071                   /media/baecker/DONNEES/programs/Fiji.app/jars/javassist-3.22.0-GA.jar
+7f93998d8000-7f93998f3000 r--s 00139000 fd:03 34999537                   /media/baecker/DONNEES/programs/Fiji.app/jars/swingx-1.6.1.jar
+7f93998f3000-7f93998f4000 r--s 00003000 fd:03 31336075                   /media/baecker/DONNEES/programs/Fiji.app/jars/jta-1.1.jar
+7f93998f4000-7f93998f6000 r--s 00000000 fd:03 31336080                   /media/baecker/DONNEES/programs/Fiji.app/jars/aopalliance-1.0.jar
+7f93998f6000-7f93998f8000 r--s 00000000 fd:03 31336165                   /media/baecker/DONNEES/programs/Fiji.app/jars/jul-to-slf4j-1.7.25.jar
+7f93998f8000-7f93998fa000 r--s 00008000 fd:03 34999403                   /media/baecker/DONNEES/programs/Fiji.app/jars/jama-1.0.3.jar
+7f93998fa000-7f93998fb000 r--s 0000b000 fd:03 34999284                   /media/baecker/DONNEES/programs/Fiji.app/jars/VectorString-2.0.1.jar
+7f93998fb000-7f9399900000 r--s 0003b000 fd:01 24790161                   /home/baecker/anaconda3/envs/beaker/jre/lib/ext/sunjce_provider.jar
+7f9399900000-7f9399903000 r--p 00000000 fd:01 17696016                   /home/baecker/anaconda3/envs/beaker/lib/libgcc_s.so.1
+7f9399903000-7f9399910000 r-xp 00003000 fd:01 17696016                   /home/baecker/anaconda3/envs/beaker/lib/libgcc_s.so.1
+7f9399910000-7f9399913000 r--p 00010000 fd:01 17696016                   /home/baecker/anaconda3/envs/beaker/lib/libgcc_s.so.1
+7f9399913000-7f9399914000 r--p 00012000 fd:01 17696016                   /home/baecker/anaconda3/envs/beaker/lib/libgcc_s.so.1
+7f9399914000-7f9399915000 rw-p 00013000 fd:01 17696016                   /home/baecker/anaconda3/envs/beaker/lib/libgcc_s.so.1
+7f9399915000-7f9399917000 r--s 00008000 fd:01 24790141                   /home/baecker/anaconda3/envs/beaker/jre/lib/ext/sunec.jar
+7f9399917000-7f9399b17000 rw-p 00000000 00:00 0 
+7f9399b17000-7f9399d17000 rw-p 00000000 00:00 0 
+7f9399d17000-7f9399d2d000 r-xp 00000000 fd:01 24914266                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libnet.so
+7f9399d2d000-7f9399f2d000 ---p 00016000 fd:01 24914266                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libnet.so
+7f9399f2d000-7f9399f2e000 rw-p 00016000 fd:01 24914266                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libnet.so
+7f9399f2e000-7f9399f30000 rw-p 0001c000 fd:01 24914266                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libnet.so
+7f9399f30000-7f9399f41000 r-xp 00000000 fd:01 24914264                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libnio.so
+7f9399f41000-7f939a141000 ---p 00011000 fd:01 24914264                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libnio.so
+7f939a141000-7f939a142000 rw-p 00011000 fd:01 24914264                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libnio.so
+7f939a142000-7f939a145000 rw-p 00018000 fd:01 24914264                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libnio.so
+7f939a145000-7f939a345000 rw-p 00000000 00:00 0 
+7f939a345000-7f939a34a000 r--s 0009a000 fd:01 24652018                   /home/baecker/anaconda3/envs/beaker/jre/lib/jsse.jar
+7f939a34a000-7f939a34c000 r--s 00005000 fd:01 22414854                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/groovy/lib/org.abego.treelayout.core-1.0.1.jar
+7f939a34c000-7f939a351000 r--s 00032000 fd:01 22414908                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/groovy/lib/groovy.jar
+7f939a351000-7f939a358000 r--s 00055000 fd:01 22414919                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/groovy/lib/antlr4-runtime-4.5.jar
+7f939a358000-7f939a3c7000 r--s 00637000 fd:01 22414941                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/groovy/lib/groovy-all-2.4.3.jar
+7f939a3c7000-7f939a3c9000 r--s 00003000 fd:01 19798134                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/annotations-13.0.jar
+7f939a3c9000-7f939a3cc000 r--s 0001d000 fd:01 19798153                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-webapp-9.4.9.v20180320.jar
+7f939a3cc000-7f939a3d0000 r--s 00039000 fd:01 19798164                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/plexus-utils-3.0.24.jar
+7f939a3d0000-7f939a3d4000 r--s 00037000 fd:01 19798161                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jeromq-0.3.5.jar
+7f939a3d4000-7f939a3ea000 r--s 00124000 fd:01 19798182                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/ivy-2.4.0.jar
+7f939a3ea000-7f939a3ec000 r--s 0000e000 fd:01 19798147                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-logging-1.2.jar
+7f939a3ec000-7f939a3f0000 r--s 0002f000 fd:01 19798159                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-io-2.5.jar
+7f939a3f0000-7f939a3f1000 r--s 0000c000 fd:01 19798146                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-xml-9.4.9.v20180320.jar
+7f939a3f1000-7f939a3f4000 r--s 00027000 fd:01 19798156                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-http-9.4.9.v20180320.jar
+7f939a3f4000-7f939a3f6000 r--s 00000000 fd:01 19798130                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/aopalliance-1.0.jar
+7f939a3f6000-7f939a3f7000 r--s 0000a000 fd:01 19798143                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/asm-3.1.jar
+7f939a3f7000-7f939a406000 r--s 0009f000 fd:01 19798175                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/guice-3.0.jar
+7f939a406000-7f939a409000 r--s 00015000 fd:01 19798150                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/javax.servlet-api-3.1.0.jar
+7f939a409000-7f939a40b000 r--s 00009000 fd:01 19798141                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/slf4j-api-1.7.25.jar
+7f939a40b000-7f939a413000 r--s 00071000 fd:01 19798171                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-util-9.4.9.v20180320.jar
+7f939a413000-7f939a415000 r--s 00009000 fd:01 19798144                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/hamcrest-core-1.3.jar
+7f939a415000-7f939a423000 r--s 000ae000 fd:01 19798176                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/httpclient-4.5.5.jar
+7f939a423000-7f939a425000 r--s 00019000 fd:01 19798151                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-servlet-9.4.9.v20180320.jar
+7f939a425000-7f939a427000 r--s 00007000 fd:01 19798139                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/websocket-client-9.4.9.v20180320.jar
+7f939a427000-7f939a438000 r--s 000ad000 fd:01 19798178                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/base.jar
+7f939a438000-7f939a43a000 r--s 00004000 fd:01 19798135                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/websocket-servlet-9.4.9.v20180320.jar
+7f939a43a000-7f939a440000 r--s 00036000 fd:01 19798162                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/junit-4.11.jar
+7f939a440000-7f939a442000 r--s 00002000 fd:01 19798133                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/kotlin-stdlib-jdk8-1.2.41.jar
+7f939a442000-7f939a44f000 r--s 00083000 fd:01 19798174                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-collections-3.2.2.jar
+7f939a44f000-7f939a454000 r--s 0002f000 fd:01 19798160                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/gson-2.3.1.jar
+7f939a454000-7f939a45d000 r--s 0006f000 fd:01 19798170                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/log4j-1.2.17.jar
+7f939a45d000-7f939a465000 r--s 00071000 fd:01 19798172                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-lang3-3.6.jar
+7f939a465000-7f939a467000 r--s 0001c000 fd:01 19798152                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/py4j-0.10.7.jar
+7f939a467000-7f939a478000 r--s 0010d000 fd:01 19798181                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jackson-databind-2.6.5.jar
+7f939a478000-7f939a509000 r--s 013b4000 fd:01 24790170                   /home/baecker/anaconda3/envs/beaker/jre/lib/ext/jfxrt.jar
+7f939a509000-7f939a50a000 ---p 00000000 00:00 0 
+7f939a50a000-7f939a60a000 rw-p 00000000 00:00 0 
+7f939a60a000-7f939a60d000 ---p 00000000 00:00 0 
+7f939a60d000-7f939a70b000 rw-p 00000000 00:00 0 
+7f939a70b000-7f939a70c000 ---p 00000000 00:00 0 
+7f939a70c000-7f939a70f000 ---p 00000000 00:00 0 
+7f939a70f000-7f939a80c000 rw-p 00000000 00:00 0 
+7f939a80c000-7f939a80d000 ---p 00000000 00:00 0 
+7f939a80d000-7f939a810000 ---p 00000000 00:00 0 
+7f939a810000-7f939a90d000 rw-p 00000000 00:00 0 
+7f939a90d000-7f939a90e000 ---p 00000000 00:00 0 
+7f939a90e000-7f939a911000 ---p 00000000 00:00 0 
+7f939a911000-7f939aa0e000 rw-p 00000000 00:00 0 
+7f939aa0e000-7f939aa0f000 ---p 00000000 00:00 0 
+7f939aa0f000-7f939aa12000 ---p 00000000 00:00 0 
+7f939aa12000-7f939ab0f000 rw-p 00000000 00:00 0 
+7f939ab0f000-7f939ab12000 ---p 00000000 00:00 0 
+7f939ab12000-7f939ac10000 rw-p 00000000 00:00 0 
+7f939ac10000-7f939aeef000 r--p 00000000 fd:01 15600053                   /usr/lib/locale/locale-archive
+7f939aeef000-7f939aef2000 ---p 00000000 00:00 0 
+7f939aef2000-7f939aff0000 rw-p 00000000 00:00 0 
+7f939aff0000-7f939aff3000 ---p 00000000 00:00 0 
+7f939aff3000-7f939b0f1000 rw-p 00000000 00:00 0 
+7f939b0f1000-7f939b0f2000 ---p 00000000 00:00 0 
+7f939b0f2000-7f939c000000 rw-p 00000000 00:00 0 
+7f939c000000-7f939c021000 rw-p 00000000 00:00 0 
+7f939c021000-7f93a0000000 ---p 00000000 00:00 0 
+7f93a0000000-7f93a0002000 r--s 00000000 fd:01 19798129                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/plexus-component-annotations-1.7.jar
+7f93a0002000-7f93a0005000 r--s 0001d000 fd:01 19798154                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-text-1.1.jar
+7f93a0005000-7f93a000c000 r--s 0003e000 fd:01 19798166                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/cglib-2.2.1-v20090111.jar
+7f93a000c000-7f93a0010000 r--s 0002c000 fd:01 19798158                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/websocket-common-9.4.9.v20180320.jar
+7f93a0010000-7f93a0026000 r--s 000fe000 fd:01 19798180                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/assertj-core-3.6.1.jar
+7f93a0026000-7f93a002d000 r--s 0003f000 fd:01 19798168                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-codec-1.10.jar
+7f93a002d000-7f93a002f000 r--s 00007000 fd:01 19798137                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/maven-invoker-3.0.0.jar
+7f93a002f000-7f93a003e000 r--s 000d7000 fd:01 19798179                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/kotlin-stdlib-1.2.41.jar
+7f93a003e000-7f93a0045000 r--s 00049000 fd:01 19798169                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/httpcore-4.4.9.jar
+7f93a0045000-7f93a0ec9000 rw-p 00000000 00:00 0 
+7f93a0ec9000-7f93a1099000 r--s 03c4f000 fd:01 24652032                   /home/baecker/anaconda3/envs/beaker/jre/lib/rt.jar
+7f93a1099000-7f93a290d000 rw-p 00000000 00:00 0 
+7f93a290d000-7f93a290e000 ---p 00000000 00:00 0 
+7f93a290e000-7f93a2a0e000 rw-p 00000000 00:00 0 
+7f93a2a0e000-7f93a2a0f000 ---p 00000000 00:00 0 
+7f93a2a0f000-7f93a2b0f000 rw-p 00000000 00:00 0 
+7f93a2b0f000-7f93a2b10000 ---p 00000000 00:00 0 
+7f93a2b10000-7f93a2c10000 rw-p 00000000 00:00 0 
+7f93a2c10000-7f93a2c11000 ---p 00000000 00:00 0 
+7f93a2c11000-7f93a2d11000 rw-p 00000000 00:00 0 
+7f93a2d11000-7f93a2d12000 ---p 00000000 00:00 0 
+7f93a2d12000-7f93a2e12000 rw-p 00000000 00:00 0 
+7f93a2e12000-7f93a2e13000 ---p 00000000 00:00 0 
+7f93a2e13000-7f93a2f13000 rw-p 00000000 00:00 0 
+7f93a2f13000-7f93a2f14000 ---p 00000000 00:00 0 
+7f93a2f14000-7f93a30fd000 rw-p 00000000 00:00 0 
+7f93a30fd000-7f93a3a81000 ---p 00000000 00:00 0 
+7f93a3a81000-7f93a3b6a000 rw-p 00000000 00:00 0 
+7f93a3b6a000-7f93a44ed000 ---p 00000000 00:00 0 
+7f93a44ed000-7f93a45a4000 rw-p 00000000 00:00 0 
+7f93a45a4000-7f93a4a24000 ---p 00000000 00:00 0 
+7f93a4a24000-7f93a4a9b000 rw-p 00000000 00:00 0 
+7f93a4a9b000-7f93a4de5000 ---p 00000000 00:00 0 
+7f93a4de5000-7f93a6b35000 rwxp 00000000 00:00 0 
+7f93a6b35000-7f93b3de5000 ---p 00000000 00:00 0 
+7f93b3de5000-7f93b3dff000 r-xp 00000000 fd:01 24914268                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libzip.so
+7f93b3dff000-7f93b3ffe000 ---p 0001a000 fd:01 24914268                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libzip.so
+7f93b3ffe000-7f93b3fff000 rw-p 00019000 fd:01 24914268                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libzip.so
+7f93b3fff000-7f93b4000000 rw-p 0001e000 fd:01 24914268                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libzip.so
+7f93b4000000-7f93b4b4f000 rw-p 00000000 00:00 0 
+7f93b4b4f000-7f93b8000000 ---p 00000000 00:00 0 
+7f93b8000000-7f93b8001000 r--s 00007000 fd:01 19798136                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/fluent-hc-4.5.5.jar
+7f93b8001000-7f93b8003000 r--s 00009000 fd:01 19798140                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-cli-1.2.jar
+7f93b8003000-7f93b8005000 r--s 00013000 fd:01 19798148                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/opencsv-3.10.jar
+7f93b8005000-7f93b8006000 ---p 00000000 00:00 0 
+7f93b8006000-7f93b8106000 rw-p 00000000 00:00 0 
+7f93b8106000-7f93b8111000 r-xp 00000000 fd:01 7611210                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f93b8111000-7f93b8310000 ---p 0000b000 fd:01 7611210                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f93b8310000-7f93b8311000 r--p 0000a000 fd:01 7611210                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f93b8311000-7f93b8312000 rw-p 0000b000 fd:01 7611210                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f93b8312000-7f93b8318000 rw-p 00000000 00:00 0 
+7f93b8318000-7f93b832f000 r-xp 00000000 fd:01 7611207                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f93b832f000-7f93b852e000 ---p 00017000 fd:01 7611207                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f93b852e000-7f93b852f000 r--p 00016000 fd:01 7611207                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f93b852f000-7f93b8530000 rw-p 00017000 fd:01 7611207                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f93b8530000-7f93b8532000 rw-p 00000000 00:00 0 
+7f93b8532000-7f93b853d000 r-xp 00000000 fd:01 7611212                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f93b853d000-7f93b873c000 ---p 0000b000 fd:01 7611212                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f93b873c000-7f93b873d000 r--p 0000a000 fd:01 7611212                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f93b873d000-7f93b873e000 rw-p 0000b000 fd:01 7611212                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f93b873e000-7f93b8746000 r-xp 00000000 fd:01 7611208                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f93b8746000-7f93b8946000 ---p 00008000 fd:01 7611208                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f93b8946000-7f93b8947000 r--p 00008000 fd:01 7611208                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f93b8947000-7f93b8948000 rw-p 00009000 fd:01 7611208                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f93b8948000-7f93b8972000 r-xp 00000000 fd:01 24914277                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libjava.so
+7f93b8972000-7f93b8b72000 ---p 0002a000 fd:01 24914277                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libjava.so
+7f93b8b72000-7f93b8b74000 rw-p 0002a000 fd:01 24914277                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libjava.so
+7f93b8b74000-7f93b8b78000 rw-p 00036000 fd:01 24914277                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libjava.so
+7f93b8b78000-7f93b8b87000 r-xp 00000000 fd:01 24914248                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libverify.so
+7f93b8b87000-7f93b8d86000 ---p 0000f000 fd:01 24914248                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libverify.so
+7f93b8d86000-7f93b8d88000 rw-p 0000e000 fd:01 24914248                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libverify.so
+7f93b8d88000-7f93b8d89000 rw-p 00012000 fd:01 24914248                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/libverify.so
+7f93b8d89000-7f93b8d90000 r-xp 00000000 fd:01 7611217                    /lib/x86_64-linux-gnu/librt-2.27.so
+7f93b8d90000-7f93b8f8f000 ---p 00007000 fd:01 7611217                    /lib/x86_64-linux-gnu/librt-2.27.so
+7f93b8f8f000-7f93b8f90000 r--p 00006000 fd:01 7611217                    /lib/x86_64-linux-gnu/librt-2.27.so
+7f93b8f90000-7f93b8f91000 rw-p 00007000 fd:01 7611217                    /lib/x86_64-linux-gnu/librt-2.27.so
+7f93b8f91000-7f93b912e000 r-xp 00000000 fd:01 7611204                    /lib/x86_64-linux-gnu/libm-2.27.so
+7f93b912e000-7f93b932d000 ---p 0019d000 fd:01 7611204                    /lib/x86_64-linux-gnu/libm-2.27.so
+7f93b932d000-7f93b932e000 r--p 0019c000 fd:01 7611204                    /lib/x86_64-linux-gnu/libm-2.27.so
+7f93b932e000-7f93b932f000 rw-p 0019d000 fd:01 7611204                    /lib/x86_64-linux-gnu/libm-2.27.so
+7f93b932f000-7f93b9f6f000 r-xp 00000000 fd:01 24914305                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/server/libjvm.so
+7f93b9f6f000-7f93ba16e000 ---p 00c40000 fd:01 24914305                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/server/libjvm.so
+7f93ba16e000-7f93ba23e000 rw-p 00c3f000 fd:01 24914305                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/server/libjvm.so
+7f93ba23e000-7f93ba280000 rw-p 00000000 00:00 0 
+7f93ba280000-7f93ba283000 rw-p 00f87000 fd:01 24914305                   /home/baecker/anaconda3/envs/beaker/jre/lib/amd64/server/libjvm.so
+7f93ba283000-7f93ba46a000 r-xp 00000000 fd:01 7611200                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f93ba46a000-7f93ba66a000 ---p 001e7000 fd:01 7611200                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f93ba66a000-7f93ba66e000 r--p 001e7000 fd:01 7611200                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f93ba66e000-7f93ba670000 rw-p 001eb000 fd:01 7611200                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f93ba670000-7f93ba674000 rw-p 00000000 00:00 0 
+7f93ba674000-7f93ba677000 r-xp 00000000 fd:01 7611203                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7f93ba677000-7f93ba876000 ---p 00003000 fd:01 7611203                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7f93ba876000-7f93ba877000 r--p 00002000 fd:01 7611203                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7f93ba877000-7f93ba878000 rw-p 00003000 fd:01 7611203                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7f93ba878000-7f93ba88d000 r-xp 00000000 fd:01 24651983                   /home/baecker/anaconda3/envs/beaker/lib/libjli.so
+7f93ba88d000-7f93baa8d000 ---p 00015000 fd:01 24651983                   /home/baecker/anaconda3/envs/beaker/lib/libjli.so
+7f93baa8d000-7f93baa8e000 rw-p 00015000 fd:01 24651983                   /home/baecker/anaconda3/envs/beaker/lib/libjli.so
+7f93baa8e000-7f93baa8f000 rw-p 00019000 fd:01 24651983                   /home/baecker/anaconda3/envs/beaker/lib/libjli.so
+7f93baa8f000-7f93baaa9000 r-xp 00000000 fd:01 7611215                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f93baaa9000-7f93baca8000 ---p 0001a000 fd:01 7611215                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f93baca8000-7f93baca9000 r--p 00019000 fd:01 7611215                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f93baca9000-7f93bacaa000 rw-p 0001a000 fd:01 7611215                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f93bacaa000-7f93bacae000 rw-p 00000000 00:00 0 
+7f93bacae000-7f93bacd5000 r-xp 00000000 fd:01 7606839                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f93bacd5000-7f93bacd6000 r--s 00001000 fd:01 19798131                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jvm-repr-0.3.1.jar
+7f93bacd6000-7f93bacda000 r--s 0003c000 fd:01 19798165                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jackson-core-2.6.5.jar
+7f93bacda000-7f93bace0000 r--s 0003f000 fd:01 19798167                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-client-9.4.9.v20180320.jar
+7f93bace0000-7f93bace3000 r--s 00008000 fd:01 19798142                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/websocket-api-9.4.9.v20180320.jar
+7f93bace3000-7f93bace8000 r--s 00038000 fd:01 19798163                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-beanutils-1.9.3.jar
+7f93bace8000-7f93bacec000 r--s 00028000 fd:01 19798157                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/javalin-1.7.0.jar
+7f93bacec000-7f93badb1000 rw-p 00000000 00:00 0 
+7f93badb1000-7f93badb2000 ---p 00000000 00:00 0 
+7f93badb2000-7f93badb5000 ---p 00000000 00:00 0 
+7f93badb5000-7f93baeb4000 rw-p 00000000 00:00 0 
+7f93baeb4000-7f93baeb7000 r--s 00009000 fd:01 19798145                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jackson-annotations-2.6.0.jar
+7f93baeb7000-7f93baeb9000 r--s 00007000 fd:01 19798138                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/websocket-server-9.4.9.v20180320.jar
+7f93baeb9000-7f93baeba000 r--s 00002000 fd:01 19798132                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/slf4j-log4j12-1.7.25.jar
+7f93baeba000-7f93baec2000 r--s 00087000 fd:01 19798173                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-server-9.4.9.v20180320.jar
+7f93baec2000-7f93baec5000 r--s 0001e000 fd:01 19798155                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-io-9.4.9.v20180320.jar
+7f93baec5000-7f93baec6000 r--s 00000000 fd:01 19798127                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/kotlin-stdlib-jdk7-1.2.41.jar
+7f93baec6000-7f93baec7000 r--s 00000000 fd:01 19798126                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/javax.inject-1.jar
+7f93baec7000-7f93baec9000 r--s 00015000 fd:01 19798149                   /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-security-9.4.9.v20180320.jar
+7f93baec9000-7f93baed1000 rw-s 00000000 fd:01 27791264                   /tmp/hsperfdata_baecker/3597
+7f93baed1000-7f93baed2000 rw-p 00000000 00:00 0 
+7f93baed2000-7f93baed3000 r--p 00000000 00:00 0 
+7f93baed3000-7f93baed5000 rw-p 00000000 00:00 0 
+7f93baed5000-7f93baed6000 r--p 00027000 fd:01 7606839                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f93baed6000-7f93baed7000 rw-p 00028000 fd:01 7606839                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f93baed7000-7f93baed8000 rw-p 00000000 00:00 0 
+7ffee190b000-7ffee192d000 rw-p 00000000 00:00 0                          [stack]
+7ffee197b000-7ffee197e000 r--p 00000000 00:00 0                          [vvar]
+7ffee197e000-7ffee1980000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: com.twosigma.beakerx.groovy.kernel.Groovy /run/user/1000/jupyter/kernel-5dd3856b-67db-463f-86af-b5f57ae57ceb.json
+java_class_path (initial): /home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-security-9.4.9.v20180320.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/javax.inject-1.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/kotlin-stdlib-jdk7-1.2.41.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-io-9.4.9.v20180320.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-server-9.4.9.v20180320.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/slf4j-log4j12-1.7.25.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/websocket-server-9.4.9.v20180320.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/javalin-1.7.0.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jackson-annotations-2.6.0.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-beanutils-1.9.3.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/websocket-api-9.4.9.v20180320.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jetty-client-9.4.9.v20180320.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/httpcore-4.4.9.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/jackson-core-2.6.5.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/opencsv-3.10.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/kotlin-stdlib-1.2.41.jar:/home/baecker/anaconda3/envs/beaker/lib/python3.6/site-packages/beakerx/kernel/base/lib/commons-cli-1.2.jar:/home/baecker/anacon
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/baecker/anaconda3/envs/beaker
+PATH=/home/baecker/anaconda3/envs/beaker/bin:/home/baecker/anaconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+USERNAME=baecker
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa3b070], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa3b070], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8a56c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: SIG_IGN, sa_mask[0]=00000000000010000000000000000000, sa_flags=SA_RESTART
+SIGXFSZ: [libjvm.so+0x8a56c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8a56c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8a6dc0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8a84b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8a84b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8a84b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8a84b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.1 LTS"
+
+uname:Linux 4.15.0-36-generic #39-Ubuntu SMP Mon Sep 24 16:19:09 UTC 2018 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 127658, NOFILE 4096, AS infinity
+load average:1,96 2,20 2,21
+
+/proc/meminfo:
+MemTotal:       32786372 kB
+MemFree:        13598044 kB
+MemAvailable:   29637524 kB
+Buffers:         1607504 kB
+Cached:         14062660 kB
+SwapCached:            0 kB
+Active:          8970632 kB
+Inactive:        8760572 kB
+Active(anon):    2071592 kB
+Inactive(anon):   269192 kB
+Active(file):    6899040 kB
+Inactive(file):  8491380 kB
+Unevictable:          64 kB
+Mlocked:              64 kB
+SwapTotal:      33402876 kB
+SwapFree:       33402876 kB
+Dirty:              1184 kB
+Writeback:           584 kB
+AnonPages:       2029060 kB
+Mapped:           475972 kB
+Shmem:            279904 kB
+Slab:            1271928 kB
+SReclaimable:    1119112 kB
+SUnreclaim:       152816 kB
+KernelStack:        7600 kB
+PageTables:        29552 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    49796060 kB
+Committed_AS:    6053944 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      569312 kB
+DirectMap2M:    15005696 kB
+DirectMap1G:    17825792 kB
+
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3500.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3500.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3499.998
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3500.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3500.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3500.001
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3499.997
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3499.998
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 32786372k(13915316k free), swap 33402876k(33402876k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b12) for linux-amd64 JRE (1.8.0_152-release-1056-b12), built on Nov 16 2017 13:53:23 by "root" with gcc 4.4.7 20120313 (Red Hat 4.4.7-16)
+
+time: Mon Oct 29 03:34:41 2018
+elapsed time: 3558 seconds (0d 0h 59m 18s)
+
