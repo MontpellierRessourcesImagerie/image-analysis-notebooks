@@ -2,7 +2,7 @@
 
 The project contains jupyter notebook about bio-image-analysis. Beakerx will be used to allow mixing python and java.
  
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/MontpellierRessourcesImagerie/image-analysis-notebooks/7789fc2bf68df0c5dcfdea7dc41e46a398e66b6c)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MontpellierRessourcesImagerie/image-analysis-notebooks.git/master?filepath=signal_processing%2Fcontents.ipynb)
 
 Note: The parts that launch the ImageJ gui interface from a notebook will only work when you run it locally, not on the server via mybinder.
 
